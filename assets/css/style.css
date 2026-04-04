@@ -278,7 +278,7 @@ a:hover {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--glass-border);
-  box-shadow: var(--shadow-glass);
+  box-shadow: none;
 }
 
 [data-theme="dark"] .navbar {
