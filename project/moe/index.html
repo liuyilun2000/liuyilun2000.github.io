@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Lab Research: Social Networks – Yilun Liu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__blob scene__blob--1"></div>
+  <div class="scene__blob scene__blob--2"></div>
+  <div class="scene__blob scene__blob--3"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <button type="button" id="theme-toggle" class="theme-toggle-btn ms-2 flex-shrink-0" title="Toggle dark/light mode" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+    <div class="d-flex align-items-center ms-auto flex-shrink-0 navbar-toolbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">about</a></li>
+        <li class="nav-item"><a class="nav-link" href="../projects.html">projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+
+  <div class="back-link">
+    <a href="../projects.html"><i class="fas fa-arrow-left me-1"></i>Back to projects</a>
+  </div>
+
+  <div class="page-hero">
+    <h1>Lab Research: Data Mining in Social Networks</h1>
+    <div class="meta">
+      <span><i class="fas fa-calendar me-1"></i>09.2018 – 07.2021</span>
+      <span><i class="fas fa-building me-1"></i>Ministry of Education Key Lab for Intelligent Networks and Network Security, XJTU</span>
+      <span><i class="fas fa-user me-1"></i>Tutors: Prof. Xiaohong Guan, Prof. Chao Shen, Assoc. Prof. Xiaoming Liu</span>
+      <span><i class="fas fa-map-marker-alt me-1"></i>Xi'an, China</span>
+    </div>
+  </div>
+
+  <!-- Introduction: motivation (left) and proposal + heterogeneous example (right) -->
+  <div class="section-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <p>
+          In this lab research, we developed our study on a project
+          <strong>Linking the Users Across Multiple Social Networks Based on the Heterogeneous Media Data Mining</strong>.
+        </p>
+        <p>
+          Online social networks play an important role in people’s daily lives. People participate in
+          multiple online social networks for different purposes, with research indicating that the average
+          number of social media platforms in which a user takes part in is eight. In these different social
+          media platforms, the heterogeneous user information, social content, and user relationships make up
+          the heterogeneous media data, which are rich in information that could significantly improve the
+          performance of various kinds of applications, including friend recommendation, spam group detection
+          and information diffusion, etc. Previous outstanding works were proposed from the view of the user
+          or group by considering only the feature of user profile and network topology, which is not enough
+          to capture the potential user similarity pattern hidden beneath the user-generated contents, and
+          could be easily attacked by malicious groups.
+        </p>
+        <p>
+          In order to tackle this challenge, we focus on the social media data mining to discover the user
+          pattern across multiple heterogeneous networks. Our proposal is a joint learning model that
+          consists of two major parts: the representation of <strong>User Fingerprints</strong>, i.e., an
+          embedded knowledge graph mined from user-generated textual information, and the representation of
+          <strong>Social Fingerprints</strong>, which indicates a social interaction graph of users based on
+          both the similarity in their User Fingerprints and their behavioral relationships.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p>
+          The User Fingerprint and Social Fingerprint information are fused and presented by one heterogeneous
+          information network, in which the node with attribute denoting the entity (user or event) with its
+          information, and the edge representing different kinds of dynamic relationship among the entities.
+        </p>
+        <img src="../../assets/images/moe_heterogeneous_example.png" alt="A heterogeneous information network example on two social networks" class="content-img" />
+        <div class="img-caption">A heterogeneous information network example on 2 social networks</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- User Fingerprint pipeline (left) and Social Fingerprint / heterogeneous graph (right) -->
+  <div class="section-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <p>
+          The <strong>User Fingerprint</strong> is mined using NLP related techniques such as named entity
+          recognition (NER) and relationship extraction (RE), from the user-generated textual information,
+          including user profiles and public contents on social media. This could be achieved by following the steps:
+        </p>
+        <img src="../../assets/images/moe_semantic_network_constructing.png" alt="Constructing semantic networks based on social media contents" class="content-img" />
+        <div class="img-caption">Constructing semantic networks based on social media contents</div>
+
+        <img src="../../assets/images/moe_semantic_network_bridging.png" alt="Bridging users’ semantic networks into personal knowledge graphs" class="content-img mt-3" />
+        <div class="img-caption">Bridging users’ own semantic networks to generate personal knowledge graphs</div>
+
+        <img src="../../assets/images/moe_personal_knowledge_graphs.png" alt="Joint user representation from personal knowledge graphs" class="content-img mt-3" />
+        <div class="img-caption">Capturing the joint representation of users from personal knowledge graphs</div>
+      </div>
+      <div class="col-md-6">
+        <p>
+          The User Fingerprint is not only useful in capturing the representation of user, but could also
+          reveal the latent relationships between users. Under such assumption, we would go further by bridging
+          different users’ personal knowledge graphs to generate meta-path between users via elements in their
+          User Fingerprints.
+        </p>
+        <p>
+          Jointly considering the similarity of knowledge graph, user profile and network topology with the
+          behavior actions between users, we could obtain the <strong>Social Fingerprint</strong>.
+        </p>
+        <img src="../../assets/images/moe_knowledge_graph_bridging.png" alt="Bridging personal knowledge graphs across social media" class="content-img" />
+        <div class="img-caption">Bridging different users’ personal knowledge graphs to generate meta-path between users via contents on different social medias</div>
+
+        <img src="../../assets/images/moe_heterogeneous_constructing.png" alt="Heterogeneous network with user-user and user-content-user paths" class="content-img mt-3" />
+        <div class="img-caption">Constructing heterogeneous network of different social medias, using both user-user paths and user-content-user paths</div>
+
+        <p>
+          This improves the effectiveness of the heterogeneous graph immensely, since users in the same social
+          network are connected not only through the interactions, but also contents; and users among different
+          social networks are also connected with textual similarities, which would help greatly in aligning
+          different networks.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Alignment and preliminary results -->
+  <div class="section-card">
+    <p>
+      After User Fingerprints and Social Fingerprints were generated, we could approach on constructing the
+      heterogeneous graph of different social networks for alignment works. For the users as nodes, the joint
+      representation of users from User Fingerprints can be captured using graph embedding and similar
+      techniques. And for the relationships between nodes, both user-user links and user-content-user links as
+      meta-paths are to be considered. On aligning different social networks, we consider the representation of
+      users (nodes) and meta-paths (edges) jointly. The key to alignment is through the links across different
+      networks, including manually specified identical user pairs and the connection through texts.
+    </p>
+    <p>
+      Preliminary experiments have already shown that our proposal has the ability to deal with the current
+      issue faced by previous work, and to detect the similar users in heterogeneous networks effectively.
+    </p>
+  </div>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  © Copyright 2026 &middot; Yilun Liu
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function(){
+    var icon=document.getElementById('theme-icon');
+    var btn=document.getElementById('theme-toggle');
+    if(!btn||!icon) return;
+    function upd(t){icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';}
+    upd(document.documentElement.getAttribute('data-theme')||'dark');
+    btn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      var nxt=cur==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',nxt);
+      localStorage.setItem('theme',nxt);
+      upd(nxt);
+    });
+  })();
+</script>
+</body>
+</html>

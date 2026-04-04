@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Bachelor's Thesis – Yilun Liu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__blob scene__blob--1"></div>
+  <div class="scene__blob scene__blob--2"></div>
+  <div class="scene__blob scene__blob--3"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <button type="button" id="theme-toggle" class="theme-toggle-btn ms-2 flex-shrink-0" title="Toggle dark/light mode" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+    <div class="d-flex align-items-center ms-auto flex-shrink-0 navbar-toolbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">about</a></li>
+        <li class="nav-item"><a class="nav-link" href="../projects.html">projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+
+  <div class="back-link">
+    <a href="../projects.html"><i class="fas fa-arrow-left me-1"></i>Back to projects</a>
+  </div>
+
+  <div class="page-hero">
+    <h1>Bachelor's Thesis: Design and Implementation of Deep-Learning Based Algorithms for Anomaly Detection in Industrial Scenarios</h1>
+    <div class="meta">
+      <span><i class="fas fa-calendar me-1"></i>10.2020 – 07.2021</span>
+      <span><i class="fas fa-building me-1"></i>School of Software Engineering, Xi'an Jiaotong University</span>
+      <span><i class="fas fa-user me-1"></i>Tutors: Prof. Jizhong Zhao, Prof. Wei Xi</span>
+      <span><i class="fas fa-map-marker-alt me-1"></i>Xi'an, Shaanxi, China</span>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <p>
+          With the development of information technology and its popularization in industrial production
+          systems during the past half century, in today’s industrial anomaly detection workflow, the stages
+          of image sample collection, transmission, response processing and archiving have basically
+          achieved automation; while the decision-making process still generally relies on the traditional
+          procedures of manual identification, which wastes much manpower and material resources,
+          accompanied by shortcomings such as large errors, low efficiency, slow response, and poor coupling.
+        </p>
+        <p>
+          Establishing industrial anomaly detection technology that adapts to the development of the new era
+          is the common demand and expectation of academia and industry. In recent years, Computer Vision-based
+          image anomaly detection equipments have been gradually deployed on a large scale among various
+          fields, and a number of Neural Network-based algorithms have also been widely used in various
+          industrial scenarios. The use of such a method for industrial anomaly detection has many advantages
+          over traditional methods and broad application prospects.
+        </p>
+        <div class="row g-2">
+          <div class="col-6">
+            <img src="../../assets/images/bachelor_slide-1.png" alt="Thesis slide 1" class="content-img" />
+          </div>
+          <div class="col-6">
+            <img src="../../assets/images/bachelor_slide-2.png" alt="Thesis slide 2" class="content-img" />
+          </div>
+          <div class="col-6">
+            <img src="../../assets/images/bachelor_slide-3.png" alt="Thesis slide 3" class="content-img" />
+          </div>
+          <div class="col-6">
+            <img src="../../assets/images/bachelor_slide-4.png" alt="Thesis slide 4" class="content-img" />
+          </div>
+          <div class="col-6">
+            <img src="../../assets/images/bachelor_slide-5.png" alt="Thesis slide 5" class="content-img" />
+          </div>
+          <div class="col-6">
+            <img src="../../assets/images/bachelor_slide-6.png" alt="Thesis slide 6" class="content-img" />
+          </div>
+        </div>
+        <div class="img-caption">Report on the background of research for anomaly detection in industrial scenarios</div>
+        <p class="mt-3">
+          This paper integrates related Deep Learning algorithms and image anomaly detection technologies,
+          and designs and implements the main model of the deep neural network industrial anomaly detection
+          algorithm system composed of Convolutional Neural Network (CNN) and Generative Adversarial Network
+          (GAN).
+        </p>
+        <p>
+          In the model of the algorithm, the generator can be used to reconstruct the normal image pattern of
+          the test sample, which could be used to generate a pixel-level mask of the potential anomaly area,
+          and based on which the algorithm can solve the problem of classification, location and segmentation
+          of anomaly image simultaneously.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../../assets/images/bachelor_structure.png" alt="Structure diagram of the generator and discriminator used in the model" class="content-img" />
+        <div class="img-caption">Structure diagram of the generator and discriminator used in the model</div>
+        <p class="mt-3">
+          Compared with introducing and applying CNN or GAN models based on computer vision individually into
+          industrial anomaly detection scenes, this algorithm comprehensively extracts the respective
+          advantages of the two conventional models and combines them, which accordingly follows the solution
+          to the difficulties of image anomaly detection such as small sample problems and background noise,
+          and can effectively achieve system control key elements such as high interpretability, unbalanced
+          sample adaptability, high recall rate and low false positive rate, as to a certain extent would be
+          able to solve the shortcomings in some of the existing algorithms.
+        </p>
+        <p>
+          The deployment, testing and result evaluation of the algorithm in this paper on the MNIST
+          handwritten digit recognition dataset, CIFAR-10 natural image dataset and MVTecAD industrial
+          anomaly detection dataset show that the F1 index (average value) of its anomaly classification
+          task is 98.76%, 89.16%, and 79.45% respectively, and all of which can generate high-quality
+          reconstructed images and masks of anomaly areas. The algorithm could provide consistent and
+          effective performance in anomaly detection tasks.
+        </p>
+        <div class="row g-2 align-items-start">
+          <div class="col-md-5">
+            <img src="../../assets/images/bachelor_mnist.png" alt="MNIST generated results and metrics" class="content-img" />
+          </div>
+          <div class="col-md-7">
+            <img src="../../assets/images/bachelor_mnist-result.png" alt="MNIST anomaly detection performance metrics" class="content-img" />
+          </div>
+        </div>
+        <div class="img-caption">Generated results on the MNIST dataset using 0 as normal samples, and performance metrics for anomaly detection using different numbers as normal samples</div>
+        <div class="row g-2 align-items-start mt-3">
+          <div class="col-md-6 col-lg-5">
+            <img src="../../assets/images/bachelor_cifar.png" alt="CIFAR-10 generated results with cars as normal" class="content-img" />
+          </div>
+          <div class="col-md-6 col-lg-7">
+            <img src="../../assets/images/bachelor_MVTecAD.png" alt="MVTecAD results by category" class="content-img" />
+          </div>
+        </div>
+        <div class="img-caption">Generated results on the CIFAR-10 dataset using cars as normal samples, and results on MVTecAD dataset with normal samples of the corresponding category in each column</div>
+        <p class="mt-3 mb-0">
+          <a href="https://www.rfmoe.shop/%E5%88%98%E9%80%B8%E4%BC%A6-%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%B7%A5%E4%B8%9A%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B-%E5%AE%9A%E7%A8%BF/"><strong>» Download the original thesis (in Chinese)</strong></a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  © Copyright 2026 &middot; Yilun Liu
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function(){
+    var icon=document.getElementById('theme-icon');
+    var btn=document.getElementById('theme-toggle');
+    if(!btn||!icon) return;
+    function upd(t){icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';}
+    upd(document.documentElement.getAttribute('data-theme')||'dark');
+    btn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      var nxt=cur==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',nxt);
+      localStorage.setItem('theme',nxt);
+      upd(nxt);
+    });
+  })();
+</script>
+</body>
+</html>

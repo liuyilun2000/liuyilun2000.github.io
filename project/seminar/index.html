@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Media Ideology Analysis – Yilun Liu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__blob scene__blob--1"></div>
+  <div class="scene__blob scene__blob--2"></div>
+  <div class="scene__blob scene__blob--3"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <button type="button" id="theme-toggle" class="theme-toggle-btn ms-2 flex-shrink-0" title="Toggle dark/light mode" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+    <div class="d-flex align-items-center ms-auto flex-shrink-0 navbar-toolbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">about</a></li>
+        <li class="nav-item"><a class="nav-link" href="../projects.html">projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+
+  <div class="back-link">
+    <a href="../projects.html"><i class="fas fa-arrow-left me-1"></i>Back to projects</a>
+  </div>
+
+  <div class="page-hero">
+    <h1>Multidimensional Analysis on the Political Spectrum of Media Ideologies</h1>
+    <p class="accent mb-1"><em>Master Seminar: Computational Social Science + Application Project</em></p>
+    <div class="meta">
+      <span><i class="fas fa-calendar me-1"></i>11.2022 – 02.2023 (Seminar) &amp; 04.2023 – 10.2023 (App Project)</span>
+      <span><i class="fas fa-building me-1"></i>Professorship of Computational Social Science and Big Data, TU Munich</span>
+      <span><i class="fas fa-user me-1"></i>Supervisor: Prof. Jürgen Pfeffer</span>
+      <span><i class="fas fa-map-marker-alt me-1"></i>Munich, Germany</span>
+    </div>
+  </div>
+
+  <!-- ===== Section 1: Master Seminar ===== -->
+  <div class="section-card">
+    <h2 class="section-title"><i class="fas fa-book me-2"></i>Part I: Master Seminar (11.2022 – 02.2023)</h2>
+
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <p>
+          The contemporary field of information and communication has taken on a landscape in which many get
+          used to being exposed only to ideas they already agree with, which has made news media, along with
+          their target readerships turning more polarized and biased over the last few decades. Modern media
+          outlets have a natural incentive to appear partisan, as could help bringing more stickiness of
+          readers, which in turn creates more revenue. Once such filter bubbles form, people tend to get caught
+          up in it unconsciously, becoming limited in their ability to understand each other and easily
+          manipulated into thinking and voting. The entire ecology of public opinion platforms has become so
+          much polarized, that sometimes many would find themselves no longer even able to find the truth.
+        </p>
+        <p>
+          To liberate people from filter bubbles, we decide to perform this multidimensional analysis making
+          the opinions of different media transparent, which could greatly help the general public to access
+          a wider variety of information, to easily identify different perspectives, and to avoid being
+          manipulated by ideology biases.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p>
+          Results could improve the societies’ long-term, assisting different groups of people in understanding
+          each other better, solving real problems, learning the truth, and making wiser decisions.
+        </p>
+        <p>Hence, two research questions were raised:</p>
+        <ul>
+          <li>
+            <strong>What are the positions held by media on different dimensions of the political spectrum</strong>,
+            each of which regarding different social issues?
+          </li>
+          <li>
+            <strong>Is there any temporal shift in such positions</strong>, representing how different social
+            groups’ attitudes towards different social issues has changed across time?
+          </li>
+        </ul>
+        <p class="mb-0">
+          The study was conducted using 5,000 articles on topic “Climate Change” for each month from 2018 to
+          2022, from two media outlets <em>The Daily Mail and Mail on Sunday (London)</em> and
+          <em>The New York Times</em>, which were considered correspondingly right-leaning and left-leaning on
+          average. All articles were obtained from Nexis Uni®.
+        </p>
+      </div>
+    </div>
+
+    <img src="../../assets/images/Poster_Yilun_Ke.png" alt="Poster for the seminar Computational Social Science" class="content-img mt-4" style="max-height: 800px; object-fit: contain; background: #0a2040;" />
+    <div class="img-caption">Poster for the final representation of the seminar Computational Social Science</div>
+
+    <p class="mt-3">
+      Two pre-trained NLP frameworks, SentenceTransformers (BERT based) and TextBlob (NLTK based), were
+      adopted for this project. For each single article, sentence embedding and sentiment analysis were
+      performed first to obtain its vector representation in a 384-dimensional space, as well as its polarity
+      and subjectivity scores. For the entire article corpus, a list of significant subject topic terms was
+      obtained based on the statistics of metadata accompanying the articles. This is followed by a series of
+      unsupervised representation learning processes, consisting of sentence embedding, Principal Component
+      Analysis and K-Means clustering, which enables the system to automatically decide and calculate the
+      vector representations for different sub-topic clusters.
+    </p>
+    <p>
+      Afterwards, based on the ability of sentence embeddings to capture semantic differences through
+      canonical distance metrics, by projecting the vectors of each article onto the corresponding feature
+      vectors of different sub-topic clusters, we could finally obtain the relative sentiment representation
+      components of each article in different sub-topic dimensions. Such data serves well for various
+      downstream tasks, including time-series analysis and visualizations.
+    </p>
+    <p>
+      As can be observed through the final visualization in the poster, it is true that the chosen two media
+      outlets did convey different sentiments on multiple sub-topics, and it is also true that these positions
+      they took have shifted over time.
+    </p>
+    <p class="mb-0">
+      <a href="https://www.rfmoe.shop/Poster_Yilun_Ke/" target="_blank" rel="noopener noreferrer"><strong>[Download the original poster]</strong></a>
+    </p>
+  </div>
+
+  <!-- ===== Section 2: Application Project ===== -->
+  <div class="section-card">
+    <h2 class="section-title"><i class="fas fa-project-diagram me-2"></i>Part II: Application Project (04.2023 – 10.2023)</h2>
+
+    <img src="../../assets/images/AP-scaled.jpg" alt="Application Project Banner" class="content-img" />
+    <p class="mt-3 mb-0">
+      <a href="../../assets/files/AP-documentation.pdf" target="_blank" rel="noopener noreferrer"><strong>[Download Application Project documentation (PDF)]</strong></a>
+    </p>
+  </div>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  © Copyright 2026 &middot; Yilun Liu
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function(){
+    var icon=document.getElementById('theme-icon');
+    var btn=document.getElementById('theme-toggle');
+    if(!btn||!icon) return;
+    function upd(t){icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';}
+    upd(document.documentElement.getAttribute('data-theme')||'dark');
+    btn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      var nxt=cur==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',nxt);
+      localStorage.setItem('theme',nxt);
+      upd(nxt);
+    });
+  })();
+</script>
+</body>
+</html>

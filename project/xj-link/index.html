@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>XJ-LINK App Team – Yilun Liu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__blob scene__blob--1"></div>
+  <div class="scene__blob scene__blob--2"></div>
+  <div class="scene__blob scene__blob--3"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <button type="button" id="theme-toggle" class="theme-toggle-btn ms-2 flex-shrink-0" title="Toggle dark/light mode" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+    <div class="d-flex align-items-center ms-auto flex-shrink-0 navbar-toolbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">about</a></li>
+        <li class="nav-item"><a class="nav-link" href="../projects.html">projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+
+  <!-- Back link -->
+  <div class="back-link">
+    <a href="../projects.html"><i class="fas fa-arrow-left me-1"></i>Back to projects</a>
+  </div>
+
+  <!-- Page hero -->
+  <div class="page-hero">
+    <h1>Mobile Application Team: XJ-LINK Development and Maintenance</h1>
+    <div class="meta">
+      <span><i class="fas fa-calendar me-1"></i>12.2016 – 01.2018</span>
+      <span><i class="fas fa-building me-1"></i>Data and Information Center, Xi'an Jiaotong University</span>
+      <span><i class="fas fa-map-marker-alt me-1"></i>Xi'an, China</span>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="section-card">
+    <div class="row g-4">
+
+      <!-- Left column -->
+      <div class="col-md-6">
+        <p>
+          During 2016-2018 I joined in the team “Linker Studio” (零客工作室), which was a technology-driven student club founded in 2015 and hosted under the Data and Information Center at XJTU. As a team we focused on our self-developed campus mobile application “XJ-LINK” (西交Link), which served as a convenient integrated tool for students checking schedules, exam grades, library borrowings, campus news and guest lecture information, topping up their student card balances, performing teaching assessment, registering for club activities, etc. 
+        </p>
+
+        <p>
+          The team was committed to building practical and interesting products for XJTUer with low-latency distributed architectures, better mobile internet services and windows to stay more connected with each other.
+        </p>
+
+        <img src="../../assets/images/XJ-Link_Framework.png" alt="XJ-Link Architecture Diagram" class="content-img" />
+        <div class="img-caption">Front and back-end architecture diagrams of the XJ-Link application</div>
+      </div>
+
+      <!-- Right column -->
+      <div class="col-md-6">
+        <p>
+          I was involved in developing, maintaining and updating multiple modules, including displaying web feeds of campus news, guest lectures, job fairs, available lecture halls and daily menus of the canteens, and extending loan periods of books from libraries. I was also in charge of designing posters, flyers and the showcase images in AppStore for promoting the new versions of the app and their launch events, and the student club itself.
+        </p>
+
+        <img src="../../assets/images/XJ-Link_Screenshots.png" alt="XJ-Link Screenshots" class="content-img" />
+        <div class="img-caption">Screenshots of XJ-LINK during different version iterations</div>
+
+        <img src="../../assets/images/XJ-Link_Posters.png" alt="XJ-Link Posters" class="content-img" />
+        <div class="img-caption">Promotional posters and flyers for XJ-LINK and Linker Studio</div>
+
+        <p> 
+          By 2018, the application XJ-LINK has 12,407 users registered, covering more than 9,200 (60%) undergraduate students, with an average of 2,000+ daily active users, 4,500+ weekly active users and a peak of 7,000 monthly active users. We also managed to collaborate with all 125 student clubs in XJTU.
+        </p>
+
+        <p>
+          The team project XJ-LINK: Design & Implementation of Digital Campus Information Systems Basing on Mobile Internet won a silver award in the 2018 Entrepreneurship Practice Competition of XJTU.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  © Copyright 2026 &middot; Yilun Liu
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function(){
+    var icon=document.getElementById('theme-icon');
+    var btn=document.getElementById('theme-toggle');
+    if(!btn||!icon) return;
+    function upd(t){icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';}
+    upd(document.documentElement.getAttribute('data-theme')||'dark');
+    btn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      var nxt=cur==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',nxt);
+      localStorage.setItem('theme',nxt);
+      upd(nxt);
+    });
+  })();
+</script>
+</body>
+</html>

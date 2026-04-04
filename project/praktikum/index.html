@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Master Praktikum – Yilun Liu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__blob scene__blob--1"></div>
+  <div class="scene__blob scene__blob--2"></div>
+  <div class="scene__blob scene__blob--3"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <button type="button" id="theme-toggle" class="theme-toggle-btn ms-2 flex-shrink-0" title="Toggle dark/light mode" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+    <div class="d-flex align-items-center ms-auto flex-shrink-0 navbar-toolbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">about</a></li>
+        <li class="nav-item"><a class="nav-link" href="../projects.html">projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+
+  <div class="back-link">
+    <a href="../projects.html"><i class="fas fa-arrow-left me-1"></i>Back to projects</a>
+  </div>
+
+  <div class="page-hero">
+    <h1>Master Praktikum: Machine Learning in Crowd Modeling &amp; Simulation</h1>
+    <div class="meta">
+      <span><i class="fas fa-calendar me-1"></i>10.2022 – 01.2023</span>
+      <span><i class="fas fa-building me-1"></i>Chair of Scientific Computing in Computer Science (SCCS), TU Munich</span>
+      <span><i class="fas fa-user me-1"></i>Tutor: Dr. Felix Dietrich</span>
+      <span><i class="fas fa-map-marker-alt me-1"></i>Munich, Germany</span>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <p class="mb-0">
+      This Praktikum course consists of 6 team projects, which include systematically studying and implementing
+      algorithms relating to crowd modelling, dynamical systems theory, machine learning techniques and
+      numerical analysis of complex systems, development of extensions for simulation software (Vadere),
+      validation of models and data, and construction of neural networks applied to simulation results for
+      modelling pedestrian movement speed.
+    </p>
+  </div>
+
+  <div class="section-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <img src="../../assets/images/praktikum_1-2.png" alt="Cellular automaton simulation" class="content-img" />
+        <img src="../../assets/images/praktikum_1-3.png" alt="Cellular automaton visualization" class="content-img mt-3" />
+      </div>
+      <div class="col-md-6">
+        <p>
+          In the first project we model and simulate a human crowd with a simple cellular automaton, the kind
+          of systems typically characterized by that each individual part being relatively simple, where
+          interactions could lead to very complex behavior.
+        </p>
+        <p>
+          We set up our implementation and simulation environment from scratch with detailed visualization and
+          user-interface for adding pedestrians, targets and obstacles, using Python and the tkinter package.
+        </p>
+        <p>
+          For obstacle avoidance, a rudimentary approach, the Dijkstra algorithm, and the Fast Marching method
+          were introduced and compared for the computation of the distance field.
+        </p>
+        <p class="mb-0">
+          The developed system was tested with scenarios including corridor, bottleneck, corner, etc., following
+          the RiMEA guidelines.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-8">
+        <img src="../../assets/images/praktikum_2-1.png" alt="Vadere SIR simulation" class="content-img" />
+        <img src="../../assets/images/praktikum_2-UML.svg" alt="UML diagram for Vadere extension" class="content-img mt-3" />
+      </div>
+      <div class="col-md-4">
+        <img src="../../assets/images/praktikum_2-2.png" alt="Supermarket scenario" class="content-img" />
+        <img src="../../assets/images/praktikum_2-3.png" alt="Simulation results" class="content-img mt-3" />
+        <img src="../../assets/images/praktikum_2-4.png" alt="Infection visualization" class="content-img mt-3" />
+      </div>
+    </div>
+    <p class="mt-4">
+      In the second project we integrated a new SIR (Susceptible, Infected and Recovered) model into the
+      Vadere software, a tool for the simulation and visualization of human crowds, by modifying and
+      extending its source code in Java and rebuilding the software. After the core part being tested, we
+      added more features for visualization and recording of results, and constructed multiple scenarios
+      including an artificial “supermarket” where pedestrians were spawned at the entrance, wandering inside
+      the scenario and leaving after some time.
+    </p>
+    <p class="mb-0">
+      By increasing the potential space width of pedestrians, we simulate a “social distancing” policy in the
+      supermarket and presented the infection results. We also tested different cases of controlling density
+      at the entrance, closing several sections, closing half of the cashiers, etc., and discovered that some
+      could indeed reduce the number of infections.
+    </p>
+  </div>
+
+  <div class="section-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <img src="../../assets/images/praktikum_3-1.png" alt="Dimensionality reduction experiment" class="content-img" />
+      </div>
+      <div class="col-md-6">
+        <img src="../../assets/images/praktikum_3-2.png" alt="PCA and diffusion maps" class="content-img" />
+        <img src="../../assets/images/praktikum_3-3.png" alt="VAE latent space" class="content-img mt-3" />
+      </div>
+    </div>
+    <p class="mt-4">
+      In the third project we studied methods for representing high-dimensional data with lower-dimensional
+      representations, including Principal Component Analysis, Diffusion Maps, and Variational Auto-Encoders.
+    </p>
+    <p class="mb-0">
+      For the PCA, we applied the implemented method on image data and on trajectory data of coordinates of
+      pedestrians over time steps, with visualization of reconstructions and energy loss. For the Diffusion
+      Maps, we obtained approximations of the eigenfunctions on the swiss-roll manifold and the same
+      trajectory data as PCA. For the VAE, we implemented and trained the models on the MNIST dataset, with
+      different number of dimensions of latent space.
+    </p>
+  </div>
+
+  <div class="section-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-7">
+        <img src="../../assets/images/praktikum_4-1.png" alt="Bifurcation analysis" class="content-img" />
+        <img src="../../assets/images/praktikum_4-2.png" alt="Phase portraits" class="content-img mt-3" />
+      </div>
+      <div class="col-md-5">
+        <img src="../../assets/images/praktikum_4-3.png" alt="Dynamical systems" class="content-img" />
+        <img src="../../assets/images/praktikum_4-4.png" alt="Bifurcation diagrams" class="content-img mt-3" />
+      </div>
+    </div>
+    <p class="mt-4 mb-0 overflow-x-auto">
+      In the fourth project we studied bifurcations – a qualitatively changing behavior of dynamical systems
+      over changes of their parameters – in different systems, including the cusp bifurcation
+      \(\dot{x}=\alpha_1+\alpha_2 x^2 - x^3\), the Andronov–Hopf bifurcation
+      \(\begin{cases} \dot{x}_1=\alpha x_1 - x_2 - x_1(x_1^2+x_2^2) \\ \dot{x}_2=x_1+\alpha x_2 - x_2(x_1^2+x_2^2) \end{cases}\),
+      the discrete logistic map \(x_{n+1}=rx_n(1-x_n)\), the Lorenz system
+      \(\begin{cases} \dot{x}=\sigma(y-x) \\ \dot{y}=\rho x-y-xz \\ \dot{z}=xy-\beta z \end{cases}\),
+      and the crowd dynamic bifurcation in SIR model
+      \(\begin{cases} \dot{S}=A-\delta S-\frac{\beta SI}{S+I+R} \\ \dot{I}=-(\delta+\nu)I-\mu(b, I)I+\frac{\beta SI}{S+I+R} \\ \dot{R}=\mu(b, I)I-\delta R \end{cases}\).
+    </p>
+  </div>
+
+  <div class="section-card">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <img src="../../assets/images/praktikum_5-1.png" alt="Dynamical systems from data" class="content-img" />
+        <div class="row g-2 mt-2">
+          <div class="col-6">
+            <img src="../../assets/images/praktikum_5-2.png" alt="Approximation results" class="content-img" />
+          </div>
+          <div class="col-6">
+            <img src="../../assets/images/praktikum_5-3.png" alt="Prediction on campus data" class="content-img" />
+          </div>
+        </div>
+        <p class="mt-3 mb-0">
+          In the fifth project we studied extraction of rules from observation data of dynamical systems, and
+          to use these underlying rules to predict about future observations. This includes approximating
+          functions with linear functions and combination of radial functions, approximating linear and
+          nonlinear vector fields with linear operator and radial basis functions, approximating chaotic
+          dynamics using time-delay embedding, and finally predict crowd dynamics of utilization data in TUM
+          Garching campus.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../../assets/images/praktikum_6-2.png" alt="Speed prediction comparison" class="content-img" />
+        <p class="mt-3">
+          In the final project we focus on the speed of pedestrians and how this behavior can be predicted.
+          Compared with the classic fundamental diagram based Weidmann model
+        </p>
+        <p class="text-center overflow-x-auto">\[ v = \mathrm{FD}(\bar{s}_{K}, v_0, T, l) = v_0\left(1-e^{\frac{l-\bar{s}_{K}}{v_{0}T}}\right), \]</p>
+        <p>
+          a feed-forward Artificial Neural Network (ANN) with hidden layers \(H\)
+        </p>
+        <p class="text-center overflow-x-auto">\[ v =\mathrm{NN}(H, \bar{s}_{K}, (x_{i} - x, y_{i} - y,\, 1 \leq i \leq K)) \]</p>
+        <p>
+          based on both the mean spacing and also the distances to K nearest neighbors could make more accurate
+          predictions, which was proved empirically by testing different structures of neural networks on
+          pedestrian data generated from software simulation in the corridor and bottleneck scenarios. The one
+          with 6+3 nodes and 2 hidden layers has the best performance in the experiments.
+        </p>
+        <p>
+          In the distribution diagram, the results given by Weidmann model is a line as it is simply a non-linear
+          function of the speed to mean spacing, whereas the NN has a wider distribution as it not only
+          considered the mean spacing, but all the distances to nearest neighbors. This gives it a chance to
+          fit the real data distribution better by capturing potential influences that the Weidmann model
+          fails to take into consideration. Such powerful ability was guaranteed by neural network’s
+          characteristics so as to consider higher dimensional features and model these complex non-linear
+          relationships hidden behind the data distribution, compared to simple non-linear models.
+        </p>
+        <img src="../../assets/images/praktikum_6-1.png" alt="Distribution diagram: Weidmann vs neural network" class="content-img mt-2" />
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  © Copyright 2026 &middot; Yilun Liu
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var root = document.querySelector("main");
+    if (root && typeof renderMathInElement === "function") {
+      renderMathInElement(root, {
+        delimiters: [
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+        throwOnError: false
+      });
+    }
+  });
+</script>
+<script>
+  (function(){
+    var icon=document.getElementById('theme-icon');
+    var btn=document.getElementById('theme-toggle');
+    if(!btn||!icon) return;
+    function upd(t){icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';}
+    upd(document.documentElement.getAttribute('data-theme')||'dark');
+    btn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      var nxt=cur==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',nxt);
+      localStorage.setItem('theme',nxt);
+      upd(nxt);
+    });
+  })();
+</script>
+</body>
+</html>

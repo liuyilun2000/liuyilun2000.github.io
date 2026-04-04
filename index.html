@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Yilun Liu – About</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__blob scene__blob--1"></div>
+  <div class="scene__blob scene__blob--2"></div>
+  <div class="scene__blob scene__blob--3"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <button type="button" id="theme-toggle" class="theme-toggle-btn ms-2 flex-shrink-0" title="Toggle dark/light mode" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+    <div class="d-flex align-items-center ms-auto flex-shrink-0 navbar-toolbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">about</a></li>
+        <li class="nav-item"><a class="nav-link" href="project/projects.html">projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== About ===== -->
+<main class="container my-4" id="about">
+  <div class="row g-4">
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="col-lg-3">
+      <div class="section-card sidebar-photo text-center text-lg-end">
+        <img src="assets/images/avatar.png" alt="Yilun Liu" class="img-fluid" />
+        <div class="sidebar-info mt-2">
+          <h4>Yilun Liu</h4>
+          <p class="sidebar-line">
+            <span>刘逸伦</span>
+          </p>
+          <p class="sidebar-line">
+            <a href="mailto:yilun.liu@tum.de">yilun.liu@tum.de</a>
+            <span class="sidebar-fa" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+          </p>
+          <p class="sidebar-line">
+            <span>+49 (0)1573 4759222</span>
+            <span class="sidebar-fa" aria-hidden="true"><i class="fas fa-phone"></i></span>
+          </p>
+          <hr class="accent-hr" />
+          <div class="sidebar-links">
+            <a href="https://scholar.google.com/citations?user=G7V8cr4AAAAJ" target="_blank" rel="noopener" class="sidebar-line">
+              <span>Google Scholar</span>
+              <span class="sidebar-fa" aria-hidden="true"><i class="fas fa-university"></i></span>
+            </a>
+            <a href="https://www.linkedin.com/in/liuyilun2000/" target="_blank" rel="noopener" class="sidebar-line">
+              <span>LinkedIn</span>
+              <span class="sidebar-fa" aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+            </a>
+            <a href="https://github.com/liuyilun2000" target="_blank" rel="noopener" class="sidebar-line">
+              <span>GitHub</span>
+              <span class="sidebar-fa" aria-hidden="true"><i class="fab fa-github"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== Main Column ===== -->
+    <div class="col-lg-9">
+      
+      <section class="section-card">
+        <h2 class="section-title">About Me</h2>
+        <div class="pub-entry">
+        I am a PhD student in Computer Science at LMU Munich, supervised by Prof. Dr. Volker Tresp, where I study Language Models with a focus on their mechanistic interpretability, architectural designs, and post-training applications. Prior to this, I completed my M.Sc. in Data Engineering and Analytics at the Technical University of Munich, and my B.E. in Computer Science and Technology at Xi'an Jiaotong University.</div>
+      </section>
+
+      <!-- === Selected Publications === -->
+      <section class="section-card">
+        <h2 class="section-title">Selected Publications</h2>
+
+        <div class="pub-entry">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2604.00801/" target="_blank" rel="noopener">Routing-Free Mixture-of-Experts</a></div>
+          <div class="pub-authors"><strong>Yilun Liu</strong>, Jinru Han, Sikuan Yan, Volker Tresp, Yunpu Ma</div>
+          <div class="pub-venue"><em>arXiv preprint arXiv:2604.00801</em></div>
+          <ul class="mt-1 mb-0">
+            <li>A Routing-Free MoE architecture, eliminating routers, Softmax, TopK, and hard-coded load balancing</li>
+            <li>A unified, adaptive load-balancing framework that jointly optimizes token- and expert-balancing</li>
+            <li>Experiments and analyses demonstrating the improvements of Routing-Free MoE over baselines</li>
+          </ul>
+          <div class="pub-links"><a href="https://arxiv.org/abs/2604.00801/" target="_blank" rel="noopener">[Paper]</a></div>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-title"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">PERFT: Parameter-Efficient Routed Fine-Tuning for Mixture-of-Expert Model</a></div>
+          <div class="pub-authors"><strong>Yilun Liu</strong>, Yunpu Ma, Shuo Chen, Zifeng Ding, Bailan He, Zhen Han, Volker Tresp</div>
+          <div class="pub-venue"><em>Findings of the Association for Computational Linguistics: EACL 2026, 4439-4457</em></div>
+          <ul class="mt-1 mb-0">
+            <li>Dynamics between memory vectors in experts and expert vectors in routers when PEFTing to MoE LLMs</li>
+            <li>A unified framework for integrating PEFT with MoE LLMs</li>
+            <li>PERFT as a family of adaptation strategies, with extensive experiments validating effectiveness and scalability</li>
+          </ul>
+          <div class="pub-links"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">[Paper]</a> <a href="assets/images/EACL'26-PERFT-poster.jpg" target="_blank" rel="noopener">[Poster]</a></div>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-title"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">SPIN: Sparsifying and Integrating Internal Neurons in Large Language Models for Text Classification</a></div>
+          <div class="pub-authors">Difan Jiao*, <strong>Yilun Liu*</strong>, Zhenwei Tang, Danial Matter, Jürgen Pfeffer, Ashton Anderson
+            <br /><small>(*equal contribution)</small>
+          </div>
+          <div class="pub-venue"><em>Findings of the Association for Computational Linguistics ACL 2024, 4666–4682</em></div>
+          <ul class="mt-1 mb-0">
+            <li>A lightweight plug-and-play text classification framework using LLM's internal representations</li>
+            <li>Consistently outperforming conventional methods in performance, efficiency, and interpretability</li>
+          </ul>
+          <div class="pub-links"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">[Paper]</a> <a href="assets/images/ACL'24-SPIN-poster.jpg" target="_blank" rel="noopener">[Poster]</a></div>
+        </div>
+      </section>
+
+      <!-- === Educational Background === -->
+      <section class="section-card">
+        <h2 class="section-title">Educational Background</h2>
+
+        <div class="edu-entry">
+          <div class="edu-period">10.2025 – present</div>
+          <div class="edu-content">
+            <strong>Ph.D. Student <em>(in progress)</em></strong> 
+            <div class="institution">Institut für Informatik, Ludwig-Maximilians-Universität München<br />Supervisor: Prof. Dr. Volker Tresp</div>
+          </div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-period">10.2021 – </div>
+          <div class="edu-content">
+            <strong>M.Sc. Data Engineering and Analytics </strong> <a href="assets/files/Leistungsnachweis.pdf" target="_blank" rel="noopener"><em>» Transcript</em></a>
+            <div class="institution">Department of Informatics, <a href="https://www.in.tum.de/in/startseite/" target="_blank" rel="noopener">Technical University of Munich</a><br />Munich, Bavaria, Germany</div>
+          </div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-period">09.2017 – 07.2021</div>
+          <div class="edu-content">
+            <strong>B.E. Computer Science and Technology</strong> <a href="assets/files/Yilun_Bachelor_Curricularanalyse.pdf" target="_blank" rel="noopener"><em>» Transcript</em></a>
+            <div class="institution">Faculty of Electronic and Information Engineering, <a href="https://eie.xjtu.edu.cn/" target="_blank" rel="noopener">Xi'an Jiaotong University</a><br />Xi'an, Shaanxi, China</div>
+          </div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-period">09.2016 – 07.2017</div>
+          <div class="edu-content">
+            <strong>Pre-university Education, Honors Youth Program</strong>
+            <div class="institution">Qian Xuesen Honors College, XJTU &amp; Tianjin Nankai High School<br />Xi'an, Shaanxi; Tianjin, China</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- === Skills === -->
+      <!--section class="section-card">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skill-category">
+          <strong>Programming</strong>
+          Python · R · C++ · Julia · Java · C# · HTML+CSS+JS · Flask · SQL · x86 Assembly · MATLAB
+        </div>
+
+        <div class="skill-category">
+          <strong>Languages</strong>
+          Chinese (native) · English (TOEFL 107 · GRE VR 157 / QR 170 / AW 4.0) · German (B1 classroom)
+        </div>
+
+        <div class="skill-category">
+          <strong>Other Skills</strong>
+          MS Power BI &amp; Office · LaTeX · Graphic Design (Adobe PS+AI, Cinema 4D) · Video &amp; Audio (AE+Premiere+Audition) · Music (Piano, Violin)
+        </div>
+      </section-->
+
+    </div><!-- /col-lg-9 -->
+  </div><!-- /row -->
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  © Copyright 2026 &middot; Yilun Liu
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function(){
+    var icon=document.getElementById('theme-icon');
+    var btn=document.getElementById('theme-toggle');
+    if(!btn||!icon) return;
+    function upd(t){icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';}
+    upd(document.documentElement.getAttribute('data-theme')||'dark');
+    btn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      var nxt=cur==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',nxt);
+      localStorage.setItem('theme',nxt);
+      upd(nxt);
+    });
+  })();
+</script>
+</body>
+</html>

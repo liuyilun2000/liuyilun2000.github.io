@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Yilun Liu – Projects</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__blob scene__blob--1"></div>
+  <div class="scene__blob scene__blob--2"></div>
+  <div class="scene__blob scene__blob--3"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <button type="button" id="theme-toggle" class="theme-toggle-btn ms-2 flex-shrink-0" title="Toggle dark/light mode" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+    <div class="d-flex align-items-center ms-auto flex-shrink-0 navbar-toolbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">about</a></li>
+        <li class="nav-item"><a class="nav-link active" href="projects.html" aria-current="page">projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Projects ===== -->
+<main class="container my-4">
+  <div class="row g-4">
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="col-lg-3">
+      <div class="section-card sidebar-photo text-center text-lg-end">
+        <img src="../assets/images/avatar.png" alt="Yilun Liu" class="img-fluid" />
+        <div class="sidebar-info mt-2">
+          <h4>Yilun Liu</h4>
+          <p class="sidebar-line">
+            <span>刘逸伦</span>
+          </p>
+          <p class="sidebar-line">
+            <a href="mailto:yilun.liu@tum.de">yilun.liu@tum.de</a>
+            <span class="sidebar-fa" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+          </p>
+          <p class="sidebar-line">
+            <span>+49 (0)1573 4759222</span>
+            <span class="sidebar-fa" aria-hidden="true"><i class="fas fa-phone"></i></span>
+          </p>
+          <hr class="accent-hr" />
+          <div class="sidebar-links">
+            <a href="https://scholar.google.com/citations?user=G7V8cr4AAAAJ" target="_blank" rel="noopener" class="sidebar-line">
+              <span>Google Scholar</span>
+              <span class="sidebar-fa" aria-hidden="true"><i class="fas fa-university"></i></span>
+            </a>
+            <a href="https://www.linkedin.com/in/liuyilun2000/" target="_blank" rel="noopener" class="sidebar-line">
+              <span>LinkedIn</span>
+              <span class="sidebar-fa" aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+            </a>
+            <a href="https://github.com/liuyilun2000" target="_blank" rel="noopener" class="sidebar-line">
+              <span>GitHub</span>
+              <span class="sidebar-fa" aria-hidden="true"><i class="fab fa-github"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== Main Column ===== -->
+    <div class="col-lg-9">
+
+      <section class="section-card" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <!-- Application Project -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">04.2023 – 10.2023</div>
+          </div>
+          <div class="col-md-10">
+            <a href="seminar/" class="project-img-link"><img src="../assets/images/AP-scaled.jpg" alt="Application Project" class="project-img" /></a>
+            <div class="project-title">
+              <a href="seminar/">Leveraging Intermediate Neuron Activations from Pretrained Large Language Models</a>
+            </div>
+            <div class="project-subtitle"><a href="seminar/">for Application Project: A Solution for Large-Scale Analysis on Tweets</a></div>
+            <div class="project-institution"><em>Professorship of Computational Social Science and Big Data, Technical University of Munich</em></div>
+            <div class="project-tutor"><strong>Tutor:</strong> Daniel Matter, Prof. Jürgen Pfeffer</div>
+            <ul class="mt-1 mb-0">
+              <li>A light weight method that leverages activation patterns of identified salient neurons from feed-forward neuron networks within transformer blocks across different layers of pretrained LLMs for text classification tasks</li>
+              <li>Experiment results suggest that proposed method notably outperforms the original paradigm of LLM for sequence classification</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Master Seminar -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">11.2022 – 02.2023</div>
+          </div>
+          <div class="col-md-10">
+            <a href="seminar/" class="project-img-link"><img src="../assets/images/Poster_Yilun_Ke.png" alt="Master Seminar poster" class="project-img" /></a>
+            <div class="project-title">
+              <a href="seminar/">Multidimensional Analysis on the Political Spectrum of Media Ideologies</a>
+            </div>
+            <div class="project-subtitle"><a href="seminar/">for Master Seminar: Computational Social Science</a></div>
+            <div class="project-institution"><em>Professorship of Computational Social Science and Big Data, Technical University of Munich</em></div>
+            <div class="project-tutor"><strong>Tutor:</strong> Prof. Jürgen Pfeffer</div>
+            <ul class="mt-1 mb-0">
+              <li>Large-scale NLP analysis over 5,000 news articles from the Daily Mail and the New York Times concerning the topic of climate change over the period 2018–2022</li>
+              <li>Representation learning process consisting of sentence embedding, PCA and clustering to automatically mine vector representations of different sub-topic clusters</li>
+              <li>Sentiment analysis and vector projection to obtain the sentiment representation components of each article on different sub-topic dimensions</li>
+              <li>Time-series analysis and visualization reveals that different media outlets hold different positions on the spectrum of some sub-topics, and such positions shift over time</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Master Praktikum -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">10.2022 – 01.2023</div>
+          </div>
+          <div class="col-md-10">
+            <a href="praktikum/" class="project-img-link"><img src="../assets/images/praktikum_2-1.png" alt="Master Praktikum" class="project-img" /></a>
+            <div class="project-title">
+              <a href="praktikum/">Master Praktikum: Machine Learning in Crowd Modeling &amp; Simulation</a>
+            </div>
+            <div class="project-institution"><em>Chair of Scientific Computing in Computer Science (SCCS), Technical University of Munich</em></div>
+            <div class="project-tutor"><strong>Tutor:</strong> Dr. Felix Dietrich</div>
+            <ul class="mt-1 mb-0">
+              <li>Systematically studied and implemented algorithms about modeling of crowds, dynamical systems theory, machine learning techniques, and numerical analysis of complex systems</li>
+              <li>Team projects on development of extensions for simulation software (Vadere), validation of models and data, and implementation of neural networks applied to simulation results for modelling pedestrian movement speed based on distances to the nearest neighbors</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bachelor's Thesis -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">10.2020 – 07.2021</div>
+          </div>
+          <div class="col-md-10">
+            <a href="bachelor/" class="project-img-link"><img src="../assets/images/bachelor_structure.png" alt="Bachelor's Thesis" class="project-img" /></a>
+            <div class="project-title">
+              <a href="bachelor/">Bachelor’s Thesis: Design and Implementation of Deep-Learning Based Algorithms for Anomaly Detection in Industrial Scenarios</a>
+            </div>
+            <div class="project-institution"><em>School of Software Engineering, Xi’an Jiaotong University</em></div>
+            <div class="project-tutor"><strong>Tutor:</strong> Prof. Jizhong Zhao, Prof. Wei Xi</div>
+            <ul class="mt-1 mb-0">
+              <li>Designed and implemented a deep neural network system for anomaly detection in industrial images, which combines the structures of Convolutional Neural Network (CNN) and Generative Adversarial Network (GAN)</li>
+              <li>By reconstructing normal image patterns based on test samples and generating pixel-level masks of potential anomalous regions, the system could simultaneously perform classification, location, and segmentation of anomalies in images, and addresses issues such as small sample problems and background noise.</li>
+              <li>Results tested on datasets including MNIST, CIFAR-10, and MVTecAD and has shown high performance with F1 index of 98.76%, 89.16%, and 79.45% respectively.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Lab Research (MOE) -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">09.2018 – 07.2021</div>
+          </div>
+          <div class="col-md-10">
+            <a href="moe/" class="project-img-link"><img src="../assets/images/moe_heterogeneous_bg.png" alt="Lab Research" class="project-img" /></a>
+            <div class="project-title">
+              <a href="moe/">Lab Research: Data Mining in Social Networks</a>
+            </div>
+            <div class="project-institution"><em>Ministry of Education Key Lab for Intelligent Networks and Network Security, Xi’an Jiaotong University</em></div>
+            <div class="project-tutor"><strong>Tutor:</strong> Prof. Xiaohong Guan, Prof. Chao Shen, Assoc. Prof. Xiaoming Liu</div>
+            <ul class="mt-1 mb-0">
+              <li>Conducted research on linking the users across different social networks</li>
+              <li>Participated in developing systems for dynamically demonstrating data collected from social networks, introducing textual information to jointly perform alignment on heterogeneous networks, and revealing the potential relationships between different users</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SPbSTU Summer School -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">08.2020 – 09.2020</div>
+          </div>
+          <div class="col-md-10">
+            <a href="spbstu/" class="project-img-link"><img src="../assets/images/spbstu_final.jpg" alt="SPbSTU Summer School" class="project-img" /></a>
+            <div class="project-title">
+              <a href="spbstu/">International Polytechnic Summer School:</a>
+            </div>
+            <div class="project-subtitle"><a href="spbstu/">Machine Learning – Theory and Application</a></div>
+            <div class="project-institution"><em>Peter the Great St. Petersburg Polytechnic University</em></div>
+            <div class="project-tutor"><strong>Tutor:</strong> Dr. Nikita Kudriashov, Dr. Oğul Ünal</div>
+            <ul class="mt-1 mb-0">
+              <li>Conducted studies on regression predictions with a variety of machine learning methodologies</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Chatbot -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">06.2020 – 08.2020</div>
+          </div>
+          <div class="col-md-10">
+            <a href="chatbot/" class="project-img-link"><img src="../assets/images/chatbot-2.png" alt="Chatbot Project" class="project-img" /></a>
+            <div class="project-title">
+              <a href="chatbot/">Remote Collaboration Project: Chatbot Design and Development</a>
+            </div>
+            <div class="project-institution"><em>MIT IBM Watson AI Lab</em></div>
+            <div class="project-tutor"><strong>Tutor:</strong> Prof. Fan Zhang</div>
+            <ul class="mt-1 mb-0">
+              <li>A Rasa-NLP based chatbot, with built and trained language models from scratch in specific domains</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- iGEM -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">01.2019 – 11.2019</div>
+          </div>
+          <div class="col-md-10">
+            <a href="igem/" class="project-img-link"><img src="../assets/images/iGEM_poster-scaled.jpg" alt="iGEM 2019" class="project-img" /></a>
+            <div class="project-title">
+              <a href="igem/">International Genetically Engineered Machine Competition (iGEM) 2019</a>
+            </div>
+            <div class="project-subtitle"><a href="igem/">XJTU-CHINA Team Project: Bacterial Fragrance Generator</a></div>
+            <div class="project-institution"><em>School of Life Science &amp; Technology, Xi’an Jiaotong University</em></div>
+            <ul class="mt-1 mb-0">
+              <li>Involved in designing a synthetic biology system consisting of engineered E. coli and light-controlled gene circuit to improve sleep quality by selectively producing 2 fragrance molecules: linalool at night and limonene in the morning</li>
+              <li>The Team XJTU-CHINA won a gold medal award in iGEM 2019.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- THUKEG -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">07.2019 – 08.2019</div>
+          </div>
+          <div class="col-md-10">
+            <a href="thukeg/" class="project-img-link"><img src="../assets/images/thukeg.png" alt="THUKEG Exchange" class="project-img" /></a>
+            <div class="project-title">
+              <a href="thukeg/">Exchange Visit: Unsupervised Training on Graphs</a>
+            </div>
+            <div class="project-institution"><em>Tsinghua University Knowledge Engineering Group (THUKEG)</em></div>
+            <div class="project-tutor"><strong>Tutor:</strong> Prof. Jie Tang, Dr. Chenhui Zhang</div>
+            <ul class="mt-1 mb-0">
+              <li>Studied cutting-edge methodologies of graph mathematics and data mining in social networks, participated in research on graph pretraining, especially representative graph convolutional networks</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Heils -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">07.2017 – 12.2018</div>
+          </div>
+          <div class="col-md-10">
+            <a href="heils/" class="project-img-link"><img src="../assets/images/heils_bg.png" alt="Heils Team Project" class="project-img" /></a>
+            <div class="project-title">
+              <a href="heils/">Team Project: Huihe – “Cloud + Client” Intelligent Visual Recognition Solutions</a>
+            </div>
+            <div class="project-institution"><em>Heils Technology Co., Ltd, Shenzhen</em></div>
+            <ul class="mt-1 mb-0">
+              <li>A Computer Vision based commercial solution with combination of hardware and software, being tested and implemented in coal mining and tyre industries and proven to improve productivity</li>
+              <li>This team project won a silver award in the 2018 National Undergraduate Entrepreneurship Competition and a gold award in the Shaanxi Provincial Semi-Final of the 4th China “Internet+” College Students Innovation &amp; Entrepreneurship Competition</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- XJ-LINK -->
+        <div class="row project-row align-items-start g-3">
+          <div class="col-md-2">
+            <div class="project-date">12.2016 – 01.2018</div>
+          </div>
+          <div class="col-md-10">
+            <a href="xj-link/" class="project-img-link"><img src="../assets/images/XJ-Link_Screenshots.png" alt="XJ-LINK App" class="project-img" /></a>
+            <div class="project-title">
+              <a href="xj-link/">Mobile Application Team: XJ-LINK Development and Maintenance</a>
+            </div>
+            <div class="project-institution"><em>Data and Information Center, Xi’an Jiaotong University</em></div>
+            <ul class="mt-1 mb-0">
+              <li>Involved in developing, maintaining, and updating the campus mobile application “XJ-LINK” for students to check schedules, grades, library borrowings, teaching assessment, club activities, etc.</li>
+              <li>By 2018, the application has over 12,000 users registered, with a peak of 7,000 monthly active users</li>
+              <li>The team project XJ-LINK: Design &amp; Implementation of Digital Campus Information Systems Basing on Mobile Internet won a silver award in the 2018 Entrepreneurship Practice Competition of XJTU.</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+    </div><!-- /col-lg-9 -->
+  </div><!-- /row -->
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  © Copyright 2026 &middot; Yilun Liu
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function(){
+    var icon=document.getElementById('theme-icon');
+    var btn=document.getElementById('theme-toggle');
+    if(!btn||!icon) return;
+    function upd(t){icon.className=t==='dark'?'fas fa-sun':'fas fa-moon';}
+    upd(document.documentElement.getAttribute('data-theme')||'dark');
+    btn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      var nxt=cur==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',nxt);
+      localStorage.setItem('theme',nxt);
+      upd(nxt);
+    });
+  })();
+</script>
+</body>
+</html>
