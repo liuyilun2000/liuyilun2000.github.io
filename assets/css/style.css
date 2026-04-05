@@ -570,6 +570,10 @@ hr.accent-hr {
   font-weight: var(--fw-medium);
 }
 
+.pub-abstract {
+  font-size: 0.85rem;
+}
+
 .pub-links {
   font-size: 0.85rem;
   font-weight: var(--fw-medium);
@@ -612,7 +616,6 @@ hr.accent-hr {
 .edu-content .institution {
   font-size: 0.88rem;
   font-weight: var(--fw-light);
-  color: var(--color-text-muted);
 }
 
 /* ---- Projects ---- */
@@ -746,9 +749,9 @@ footer {
   -webkit-backdrop-filter: var(--glass-blur);
   border-top: 1px solid var(--glass-border);
   color: var(--color-footer-text);
-  padding: 1.25rem 1rem;
+  padding: 1rem 1rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 0.85rem;
   font-weight: var(--fw-hairline);
   box-shadow: 0 -4px 24px rgba(48, 136, 152, 0.08);
