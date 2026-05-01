@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
   <title>Yilun Liu – About</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -101,52 +102,86 @@
       <section class="section-card">
         <h2 class="section-title">Selected Publications</h2>
 
-        <div class="pub-entry">
-          <div class="pub-title">LLM Safety From Within: Detecting Harmful Content with Internal Representations</div>
-          <div class="pub-authors">Difan Jiao, <strong>Yilun Liu</strong>, Ye Yuan, Zhenwei Tang, Linfeng Du, Haolun Wu, Ashton Anderson </div>
-          <div class="pub-venue"><em>arXiv preprint arXiv:2604.18519, Accepted at ACL 2026</em></div>
-          <ul class="pub-abstract mt-1 mb-1">
-            <li>SIREN, a plug-and-play component that harnesses LLM internal representations for harmfulness detection</li>
-            <li>Outperforming dedicated safety guardrails in performance, generalization, and efficiency</li>
-          </ul>
-          <div class="pub-links"><a href="https://arxiv.org/abs/2604.18519" target="_blank" rel="noopener">[Paper]</a></div>
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <img src="assets/images/SIREN.png" alt="SIREN overview figure" class="pub-image" />
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://arxiv.org/abs/2604.18519" target="_blank" rel="noopener">LLM Safety From Within: Detecting Harmful Content with Internal Representations</a></div>
+            <div class="pub-authors">Difan Jiao, <strong>Yilun Liu</strong>, Ye Yuan, Zhenwei Tang, Linfeng Du, Haolun Wu, Ashton Anderson </div>
+            <div class="pub-venue"><em>arXiv preprint arXiv:2604.18519, Accepted at ACL 2026</em></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>SIREN, a plug-and-play component that harnesses LLM internal representations for harmfulness detection</li>
+              <li>Outperforming dedicated safety guardrails in performance, generalization, and efficiency</li>
+            </ul>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2604.18519" target="_blank" rel="noopener">[Paper]</a>
+              <a href="https://github.com/CSSLab/SIREN" target="_blank" rel="noopener">[Code]</a>
+            </div>
+          </div>
         </div>
         
-        <div class="pub-entry">
-          <div class="pub-title"><a href="https://arxiv.org/abs/2604.00801/" target="_blank" rel="noopener">Routing-Free Mixture-of-Experts</a></div>
-          <div class="pub-authors"><strong>Yilun Liu</strong>, Jinru Han, Sikuan Yan, Volker Tresp, Yunpu Ma</div>
-          <div class="pub-venue"><em>arXiv preprint arXiv:2604.00801</em></div>
-          <ul class="pub-abstract mt-1 mb-1">
-            <li>A Routing-Free MoE architecture, eliminating routers, Softmax, TopK, and hard-coded load balancing</li>
-            <li>A unified, adaptive load-balancing framework that jointly optimizes token- and expert-balancing</li>
-            <li>Experiments and analyses demonstrating the improvements of Routing-Free MoE over baselines</li>
-          </ul>
-          <div class="pub-links"><a href="https://arxiv.org/abs/2604.00801/" target="_blank" rel="noopener">[Paper]</a></div>
-        </div>
-
-        <div class="pub-entry">
-          <div class="pub-title"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">PERFT: Parameter-Efficient Routed Fine-Tuning for Mixture-of-Expert Model</a></div>
-          <div class="pub-authors"><strong>Yilun Liu</strong>, Yunpu Ma, Shuo Chen, Zifeng Ding, Bailan He, Zhen Han, Volker Tresp</div>
-          <div class="pub-venue"><em>Findings of the Association for Computational Linguistics: EACL 2026, 4439-4457</em></div>
-          <ul class="pub-abstract mt-1 mb-1">
-            <li>Dynamics between memory vectors in experts and expert vectors in routers when PEFTing to MoE LLMs</li>
-            <li>A unified framework for integrating PEFT with MoE LLMs</li>
-            <li>PERFT as a family of adaptation strategies, with extensive experiments validating effectiveness and scalability</li>
-          </ul>
-          <div class="pub-links"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">[Paper]</a> <a href="assets/images/EACL'26-PERFT-poster.jpg" target="_blank" rel="noopener">[Poster]</a></div>
-        </div>
-
-        <div class="pub-entry">
-          <div class="pub-title"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">SPIN: Sparsifying and Integrating Internal Neurons in Large Language Models for Text Classification</a></div>
-          <div class="pub-authors">Difan Jiao*, <strong>Yilun Liu*</strong>, Zhenwei Tang, Danial Matter, Jürgen Pfeffer, Ashton Anderson
-            <small>(*equal contribution)</small>
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <img src="assets/images/RFMoE.png" alt="Routing-Free MoE overview figure" class="pub-image" />
           </div>
-          <div class="pub-venue"><em>Findings of the Association for Computational Linguistics ACL 2024, 4666–4682</em></div>
-          <ul class="pub-abstract mt-1 mb-1">
-            <li>A lightweight plug-and-play text classification framework using LLM's internal representations</li>
-            <li>Consistently outperforming conventional methods in performance, efficiency, and interpretability</li>
-          </ul>
-          <div class="pub-links"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">[Paper]</a> <a href="assets/images/ACL'24-SPIN-poster.jpg" target="_blank" rel="noopener">[Poster]</a></div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://arxiv.org/abs/2604.00801/" target="_blank" rel="noopener">Routing-Free Mixture-of-Experts</a></div>
+            <div class="pub-authors"><strong>Yilun Liu</strong>, Jinru Han, Sikuan Yan, Volker Tresp, Yunpu Ma</div>
+            <div class="pub-venue"><em>arXiv preprint arXiv:2604.00801</em></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>A Routing-Free MoE architecture, eliminating routers, Softmax, TopK, and hard-coded load balancing</li>
+              <li>A unified, adaptive load-balancing framework that jointly optimizes token- and expert-balancing</li>
+              <li>Experiments and analyses demonstrating the improvements of Routing-Free MoE over baselines</li>
+            </ul>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2604.00801/" target="_blank" rel="noopener">[Paper]</a>
+              <a href="https://github.com/liuyilun2000/Routing-Free-MoE" target="_blank" rel="noopener">[Code]</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <img src="assets/images/PERFT.png" alt="PERFT performance figure" class="pub-image" />
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">PERFT: Parameter-Efficient Routed Fine-Tuning for Mixture-of-Expert Model</a></div>
+            <div class="pub-authors"><strong>Yilun Liu</strong>, Yunpu Ma, Shuo Chen, Zifeng Ding, Bailan He, Zhen Han, Volker Tresp</div>
+            <div class="pub-venue"><em>Findings of the Association for Computational Linguistics: EACL 2026, 4439-4457</em></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>Dynamics between memory vectors in experts and expert vectors in routers when PEFTing to MoE LLMs</li>
+              <li>A unified framework for integrating PEFT with MoE LLMs</li>
+              <li>PERFT as a family of adaptation strategies, with extensive experiments validating effectiveness and scalability</li>
+            </ul>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">[Paper]</a>
+              <a href="https://github.com/liuyilun2000/PERFT" target="_blank" rel="noopener">[Code]</a>
+              <a href="assets/images/EACL'26-PERFT-poster.jpg" target="_blank" rel="noopener">[Poster]</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <img src="assets/images/SPIN.png" alt="SPIN aggregated feature analysis figure" class="pub-image" />
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">SPIN: Sparsifying and Integrating Internal Neurons in Large Language Models for Text Classification</a></div>
+            <div class="pub-authors">Difan Jiao*, <strong>Yilun Liu*</strong>, Zhenwei Tang, Danial Matter, Jürgen Pfeffer, Ashton Anderson
+              <small>(*equal contribution)</small>
+            </div>
+            <div class="pub-venue"><em>Findings of the Association for Computational Linguistics ACL 2024, 4666–4682</em></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>A lightweight plug-and-play text classification framework using LLM's internal representations</li>
+              <li>Consistently outperforming conventional methods in performance, efficiency, and interpretability</li>
+            </ul>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">[Paper]</a>
+              <a href="https://github.com/difanj0713/SPIN" target="_blank" rel="noopener">[Code]</a>
+              <a href="assets/images/ACL'24-SPIN-poster.jpg" target="_blank" rel="noopener">[Poster]</a>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Noto+Serif+SC:wght@200..900&display=swap");
 
 /* ============================================================
    Yilun Liu – Academic CV
@@ -188,8 +188,8 @@
   --bs-border-radius-xxl: 0;
   --bs-border-radius-2xl: 0;
   --bs-border-radius-pill: 0;
-  --bs-body-font-family: "Roboto Serif", "Noto Serif SC", Georgia, "Times New Roman", serif;
-  --bs-font-sans-serif: "Roboto Serif", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --bs-body-font-family: "Crimson Pro", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --bs-font-sans-serif: "Crimson Pro", "Noto Serif SC", Georgia, "Times New Roman", serif;
 }
 
 /* ---- Smooth theme transitions ---- */
@@ -199,8 +199,8 @@ a, h1, h2, h3, h4, h5, h6, p, li, span, div, strong, em {
               border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* ---- Typography (Roboto Serif variable) ---- */
-/* Weight scale uses full Roboto Serif wght axis (100–900) for hierarchy. */
+/* ---- Typography (Crimson Pro variable) ---- */
+/* Weight scale uses Crimson Pro wght axis (200-900) for hierarchy. */
 :root {
   --fw-bold: 900;
   --fw-extra-bold: 800;
@@ -226,7 +226,7 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: "Roboto Serif", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  font-family: "Crimson Pro", "Noto Serif SC", Georgia, "Times New Roman", serif;
   font-weight: var(--fw-regular);
   font-size: 1rem;
   line-height: 1.72;
@@ -242,7 +242,7 @@ body {
 .nav-link,
 .table,
 .btn {
-  font-family: "Roboto Serif", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  font-family: "Crimson Pro", "Noto Serif SC", Georgia, "Times New Roman", serif;
 }
 
 strong,
@@ -538,12 +538,14 @@ hr.accent-hr {
 
 /* ---- Publications ---- */
 .pub-entry {
+  --pub-entry-content-bottom: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-divider);
 }
 
 .pub-entry:last-child {
+  --pub-entry-content-bottom: 0;
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -580,7 +582,60 @@ hr.accent-hr {
 }
 
 .pub-links a + a {
-  margin-left: 1.35em;
+  margin-left: 0.25rem;
+}
+
+.pub-entry--with-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 100px;
+}
+
+.pub-image-slot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: var(--pub-entry-content-bottom);
+  width: clamp(5%, 20vw, 250px);
+  z-index: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Opaque on the right, fading toward the left under text */
+  -webkit-mask-image: linear-gradient(
+    to left,
+    #fff 0%,
+    #fff 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to left,
+    #fff 0%,
+    #fff 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.pub-content {
+  position: relative;
+  z-index: 1;
+  width: 78%;
+  max-width: none;
+}
+
+.pub-image-slot img,
+.pub-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  height: 100%;
+  display: block;
+  max-width: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ---- Education ---- */
@@ -840,7 +895,7 @@ footer a:hover {
 
 .img-caption,
 figcaption {
-  font-family: "Roboto Serif", "Noto Serif SC", Georgia, serif;
+  font-family: "Crimson Pro", "Noto Serif SC", Georgia, serif;
   font-size: 0.8rem;
   font-weight: var(--fw-hairline);
   font-style: italic;
@@ -881,6 +936,23 @@ figcaption {
 
 /* ---- Responsive tweaks ---- */
 @media (max-width: 767px) {
+  .pub-entry--with-image {
+    min-height: 160px;
+  }
+
+  .pub-image-slot {
+    width: clamp(70px, 22vw, 130px);
+    min-width: 0;
+    max-width: none;
+  }
+
+  .pub-image-slot img,
+  .pub-image {
+    height: 100%;
+    width: auto;
+    max-height: none;
+  }
+
   .edu-entry {
     flex-direction: column;
     gap: 0.25rem;
