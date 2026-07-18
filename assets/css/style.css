@@ -577,11 +577,11 @@ hr.accent-hr {
 }
 
 .pub-links {
-  font-size: 0.85rem;
+  font-size: inherit;
   font-weight: var(--fw-medium);
 }
 
-.pub-links a + a {
+.pub-links a {
   margin-left: 0.25rem;
 }
 
