@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Noto+Serif+SC:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Sans+SC:wght@100..900&display=swap");
 
 /* ============================================================
    Yilun Liu – Academic CV
@@ -22,8 +22,8 @@
   --color-divider:          rgba(70, 95, 105, 0.18);
   --color-heading:          rgb(55, 82, 92);
   --color-sub-heading:      rgb(68, 90, 98);
-  --shadow-card:            0 2px 14px rgba(60, 80, 90, 0.08);
-  --shadow-card-hover:      0 12px 40px rgba(60, 80, 90, 0.14);
+  --shadow-card:            0 1px 8px rgba(60, 80, 90, 0.04);
+  --shadow-card-hover:      0 6px 20px rgba(60, 80, 90, 0.07);
   --color-page-hero-bg:     rgba(255, 255, 255, 0.45);
   --color-page-hero-border: rgba(70, 95, 105, 0.18);
   --color-toggler:          rgba(255, 255, 255, 0.45);
@@ -38,8 +38,8 @@
     rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0) 52%
   );
-  --shadow-glass:           0 8px 32px rgba(60, 80, 90, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --shadow-glass:           0 4px 16px rgba(60, 80, 90, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
   --ease-liquid:            cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -59,8 +59,8 @@
   --color-divider:          rgba(255, 255, 255, 0.1);
   --color-heading:          #f0f4f8;
   --color-sub-heading:      #9ca3af;
-  --shadow-card:            0 8px 28px rgba(0, 0, 0, 0.35);
-  --shadow-card-hover:      0 16px 48px rgba(0, 0, 0, 0.45);
+  --shadow-card:            0 4px 16px rgba(0, 0, 0, 0.16);
+  --shadow-card-hover:      0 8px 24px rgba(0, 0, 0, 0.22);
   --color-page-hero-bg:     rgba(255, 255, 255, 0.04);
   --color-page-hero-border: rgba(255, 255, 255, 0.1);
   --color-toggler:          rgba(255, 255, 255, 0.4);
@@ -73,8 +73,8 @@
     rgba(255, 255, 255, 0.05) 0%,
     rgba(255, 255, 255, 0) 50%
   );
-  --shadow-glass:           0 8px 36px rgba(0, 0, 0, 0.42),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --shadow-glass:           0 4px 18px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 /* ---- Liquid glass: animated backdrop ---- */
@@ -200,8 +200,8 @@
   --bs-border-radius-xxl: 0;
   --bs-border-radius-2xl: 0;
   --bs-border-radius-pill: 0;
-  --bs-body-font-family: "Crimson Pro", "Noto Serif SC", Georgia, "Times New Roman", serif;
-  --bs-font-sans-serif: "Crimson Pro", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  --bs-body-font-family: "Noto Sans", "Noto Sans SC", system-ui, sans-serif;
+  --bs-font-sans-serif: "Noto Sans", "Noto Sans SC", system-ui, sans-serif;
 }
 
 /* ---- Smooth theme transitions ---- */
@@ -211,8 +211,8 @@ a, h1, h2, h3, h4, h5, h6, p, li, span, div, strong, em {
               border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* ---- Typography (Crimson Pro variable) ---- */
-/* Weight scale uses Crimson Pro wght axis (200-900) for hierarchy. */
+/* ---- Typography (Noto Sans variable) ---- */
+/* Weight scale uses Noto Sans wght axis (100-900) for hierarchy. */
 :root {
   --fw-bold: 900;
   --fw-extra-bold: 800;
@@ -238,9 +238,9 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: "Crimson Pro", "Noto Serif SC", Georgia, "Times New Roman", serif;
-  font-weight: var(--fw-regular);
-  font-size: 1rem;
+  font-family: "Noto Sans", "Noto Sans SC", system-ui, sans-serif;
+  font-weight: var(--fw-light);
+  font-size: 0.9rem;
   line-height: 1.72;
   overflow-x: hidden;
   min-height: 100vh;
@@ -254,7 +254,7 @@ body {
 .nav-link,
 .table,
 .btn {
-  font-family: "Crimson Pro", "Noto Serif SC", Georgia, "Times New Roman", serif;
+  font-family: "Noto Sans", "Noto Sans SC", system-ui, sans-serif;
 }
 
 strong,
@@ -567,6 +567,7 @@ hr.accent-hr {
   font-weight: var(--fw-bold);
   line-height: 1.4;
   color: var(--color-text);
+  width: 112%;
 }
 
 .pub-authors {
@@ -617,25 +618,33 @@ hr.accent-hr {
   bottom: var(--pub-entry-content-bottom);
   width: clamp(5%, 20vw, 250px);
   z-index: 0;
-  pointer-events: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Opaque on the right, fading toward the left under text */
+  /* Right: stay opaque; medium fade; full vanish between original and tight cut */
   -webkit-mask-image: linear-gradient(
     to left,
     #fff 0%,
-    #fff 20%,
+    #fff 30%,
+    rgba(255, 255, 255, 0) 75%,
     rgba(255, 255, 255, 0) 100%
   );
   mask-image: linear-gradient(
     to left,
     #fff 0%,
-    #fff 20%,
+    #fff 30%,
+    rgba(255, 255, 255, 0) 75%,
     rgba(255, 255, 255, 0) 100%
   );
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+.pub-image-slot > a {
+  position: absolute;
+  inset: 0;
+  display: block;
+  text-decoration: none;
 }
 
 .pub-content {
@@ -915,7 +924,7 @@ footer a:hover {
 
 .img-caption,
 figcaption {
-  font-family: "Crimson Pro", "Noto Serif SC", Georgia, serif;
+  font-family: "Noto Sans", "Noto Sans SC", system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: var(--fw-hairline);
   font-style: italic;
@@ -939,7 +948,7 @@ figcaption {
 }
 
 .table td {
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-light);
   border-color: var(--color-divider);
   color: var(--color-text);
 }
