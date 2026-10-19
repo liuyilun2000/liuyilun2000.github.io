@@ -802,6 +802,31 @@ hr.accent-hr {
   border-bottom: none;
 }
 
+/* ---- Research Funding & Computing Support ---- */
+.funding-list {
+  margin: 0;
+}
+
+.funding-entry {
+  overflow-wrap: anywhere;
+}
+
+.funding-entry + .funding-entry {
+  margin-top: 1.1rem;
+}
+
+.funding-provider {
+  font-weight: var(--fw-book);
+  line-height: 1.5;
+}
+
+.funding-funders {
+  margin: 0.3rem 0 0;
+  color: var(--color-sub-heading);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
 /* ---- Skills ---- */
 .skill-category {
   display: flex;
