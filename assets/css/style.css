@@ -530,22 +530,41 @@ hr.accent-hr {
   color: var(--color-accent);
 }
 
-.sidebar-links a {
-  font-size: 0.9rem;
-  font-weight: var(--fw-book);
-  color: var(--color-accent);
+.sidebar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0.25rem 0;
 }
 
-.sidebar-links a.sidebar-line {
-  display: flex;
-  width: 100%;
-  margin: 0.25rem 0;
+@media (min-width: 992px) {
+  .sidebar-links {
+    justify-content: flex-end;
+  }
+}
+
+.sidebar-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1.35em;
+  width: 1.35em;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  line-height: 1;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .sidebar-links a:hover {
   color: var(--color-accent-hover);
   text-decoration: none;
+}
+
+.sidebar-links a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* ---- Publications ---- */
@@ -845,6 +864,30 @@ hr.accent-hr {
 .skill-category > span {
   flex: 1;
   min-width: 0;
+}
+
+.talk-list {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.talk-list li + li {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .invited-talks {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  .invited-talks > strong {
+    flex-basis: auto;
+  }
 }
 
 /* ---- Blockquote ---- */
