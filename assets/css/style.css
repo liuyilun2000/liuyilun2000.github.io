@@ -65,8 +65,8 @@
   --color-page-hero-border: rgba(70, 95, 105, 0.18);
   --color-toggler:          rgba(255, 255, 255, 0.45);
   --color-code-bg:          rgba(70, 95, 105, 0.07);
-  --glass-surface:          rgba(255, 255, 255, 0.01);
-  --glass-surface-hover:    rgba(255, 255, 255, 0.02);
+  --glass-surface:          rgba(255, 255, 255, 0.82);
+  --glass-surface-hover:    rgba(255, 255, 255, 0.9);
   --glass-border:           rgba(70, 95, 105, 0.05);
   --glass-reflection:       linear-gradient(
     -170deg,
@@ -241,7 +241,7 @@ body {
   font-family: "Noto Sans", "Noto Sans SC", system-ui, sans-serif;
   font-weight: var(--fw-light);
   font-size: 0.9rem;
-  line-height: 1.72;
+  line-height: 1.7;
   overflow-x: hidden;
   min-height: 100vh;
   min-height: 100dvh;
@@ -371,6 +371,15 @@ a:hover {
 }
 
 /* Toggler before #mainNav in DOM so the hamburger stays on the top row when the menu opens */
+.language-toggle-btn {
+  margin-left: 0.75rem !important;
+  min-height: 32px;
+  padding: 0.25rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: var(--fw-medium);
+}
+
 .navbar-toolbar {
   gap: 0.35rem;
 }
@@ -386,7 +395,7 @@ a:hover {
   position: relative;
   overflow: hidden;
   background: var(--glass-surface);
-  padding: 1.5rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: 1.5rem;
   border: 1px solid var(--glass-border);
   border-radius: 0;
@@ -431,7 +440,7 @@ h2.section-title {
   color: var(--color-heading);
   font-size: 1.2rem;
   font-weight: var(--fw-extra-bold);
-  line-height: 1.3;
+  line-height: 1.4;
   border-bottom: 2px solid var(--color-divider);
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
@@ -523,6 +532,7 @@ hr.accent-hr {
   font-size: 0.88rem;
   font-weight: var(--fw-light);
   margin-bottom: 0.25rem;
+  line-height: 1.6;
   color: var(--color-text-muted);
 }
 
@@ -569,9 +579,9 @@ hr.accent-hr {
 
 /* ---- Publications ---- */
 .pub-entry {
-  --pub-entry-content-bottom: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  --pub-entry-content-bottom: 1.15rem;
+  margin-bottom: 1.15rem;
+  padding-bottom: 1.15rem;
   border-bottom: 1px solid var(--color-divider);
 }
 
@@ -583,36 +593,55 @@ hr.accent-hr {
 }
 
 .pub-title {
-  font-weight: var(--fw-bold);
-  line-height: 1.4;
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.45;
   color: var(--color-text);
-  width: 112%;
+  width: 100%;
+  margin-bottom: 0.3rem;
+  overflow-wrap: anywhere;
+}
+
+.pub-authors,
+.pub-venue,
+.pub-abstract {
+  font-size: 0.78rem;
+  line-height: 1.6;
 }
 
 .pub-authors {
-  font-size: 0.88rem;
-  font-weight: var(--fw-thin);
+  font-weight: var(--fw-light);
   color: var(--color-text-muted);
-  line-height: 1.5;
+}
+
+.pub-authors small {
+  font-size: inherit;
 }
 
 .pub-authors strong {
   font-weight: var(--fw-extra-bold);
-  line-height: 1.5;
+  line-height: inherit;
 }
 
 .pub-venue {
-  font-size: 0.85rem;
   font-weight: var(--fw-medium);
+  margin-top: 0.2rem;
 }
 
 .pub-abstract {
-  font-size: 0.85rem;
-  line-height: 1.5;
+  padding-left: 1.15rem;
 }
 
 .pub-abstract li + li {
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
+}
+
+.pub-content > .pub-abstract.mt-1 {
+  margin-top: 0.35rem !important;
+}
+
+.pub-content > .pub-abstract.mb-1 {
+  margin-bottom: 0 !important;
 }
 
 .pub-links {
@@ -669,8 +698,15 @@ hr.accent-hr {
 .pub-content {
   position: relative;
   z-index: 1;
-  width: 78%;
+  width: 100%;
   max-width: none;
+  min-width: 0;
+}
+
+.pub-content > .pub-authors,
+.pub-content > .pub-venue,
+.pub-content > .pub-abstract {
+  max-width: 82%;
 }
 
 .pub-image-slot img,
@@ -689,8 +725,8 @@ hr.accent-hr {
 .edu-entry {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1.15rem;
+  padding-bottom: 1.15rem;
   border-bottom: 1px solid var(--color-divider);
 }
 
@@ -706,18 +742,27 @@ hr.accent-hr {
   font-size: 0.85rem;
   font-weight: var(--fw-bold);
   font-variant-numeric: tabular-nums;
-  padding-top: 2px;
+  line-height: 1.65;
+  padding-top: 0.1rem;
+}
+
+.edu-content {
+  min-width: 0;
 }
 
 .edu-content strong {
+  display: block;
   color: var(--color-text);
   font-size: 0.97rem;
   font-weight: var(--fw-extra-bold);
+  line-height: 1.5;
+  margin-bottom: 0.2rem;
 }
 
 .edu-content .institution {
   font-size: 0.88rem;
   font-weight: var(--fw-light);
+  line-height: 1.65;
 }
 
 /* ---- Projects ---- */
@@ -836,14 +881,14 @@ hr.accent-hr {
 
 .funding-provider {
   font-weight: var(--fw-book);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .funding-funders {
   margin: 0.3rem 0 0;
   color: var(--color-sub-heading);
   font-size: 0.82rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ---- Skills ---- */
@@ -853,6 +898,11 @@ hr.accent-hr {
   gap: 0.75rem;
   margin-bottom: 0.75rem;
   font-weight: var(--fw-light);
+  line-height: 1.65;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
 }
 
 .skill-category strong {
@@ -879,13 +929,13 @@ hr.accent-hr {
 }
 
 @media (max-width: 575.98px) {
-  .invited-talks {
+  .skill-category {
     flex-direction: column;
     align-items: stretch;
     gap: 0.35rem;
   }
 
-  .invited-talks > strong {
+  .skill-category > strong {
     flex-basis: auto;
   }
 }
@@ -1040,6 +1090,16 @@ figcaption {
 
 /* ---- Responsive tweaks ---- */
 @media (max-width: 767px) {
+  .pub-content {
+    width: 100%;
+  }
+
+  .pub-content > .pub-authors,
+  .pub-content > .pub-venue,
+  .pub-content > .pub-abstract {
+    max-width: 100%;
+  }
+
   .pub-entry--with-image {
     min-height: 160px;
   }
@@ -1048,6 +1108,7 @@ figcaption {
     width: clamp(70px, 22vw, 130px);
     min-width: 0;
     max-width: none;
+    opacity: 0.15;
   }
 
   .pub-image-slot img,

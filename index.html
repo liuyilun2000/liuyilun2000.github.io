@@ -27,6 +27,9 @@
     <button type="button" id="theme-toggle" class="theme-toggle-btn ms-2 flex-shrink-0" title="Toggle dark/light mode" aria-label="Toggle theme">
       <i class="fas fa-sun" id="theme-icon"></i>
     </button>
+    <button type="button" id="language-toggle" class="theme-toggle-btn language-toggle-btn" title="切换到中文" aria-label="切换到中文">
+      <svg width="20" height="20" viewBox="96 96 832 832" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" focusable="false"><path d="M330.24 128c16 0 29.184 11.904 31.232 27.264l0.32 4.288v52.16H480c27.584 0 50.304 20.992 53.056 47.872l0.256 5.504v188.8a53.312 53.312 0 0 1-47.872 52.992l-5.44 0.32-118.208-0.064v94.272a31.552 31.552 0 0 1-62.848 4.288l-0.256-4.288V507.136H181.312a53.312 53.312 0 0 1-53.056-47.808L128 453.76v-188.8c0-27.52 20.992-50.304 47.872-52.992l5.44-0.32h117.376v-52.16c0-17.408 14.08-31.552 31.552-31.552z m449.536 41.664c62.4 0 113.408 48.704 117.12 110.208l0.192 7.104v146.752a32 32 0 0 1-63.744 4.288l-0.256-4.288V286.976a53.312 53.312 0 0 0-47.872-53.056l-5.44-0.256H633.6a32 32 0 0 1-4.288-63.68L633.6 169.6h146.176zM192 275.84v167.424h106.688V275.776H192z m277.312 0h-107.52v167.424h107.52V275.776z m255.616 197.632l-2.304-4.288a32 32 0 0 0-56.64 5.376l-151.68 378.496-1.344 4.096a32 32 0 0 0 19.2 37.504l4.096 1.28a32 32 0 0 0 37.44-19.072l38.208-95.36h179.968l42.88 96.448 2.048 3.84a32 32 0 0 0 56.448-29.888l-168.32-378.432zM637.44 717.44l59.648-148.8 66.24 148.8H637.44zM160 603.776a32 32 0 0 1 31.68 27.648L192 635.776v104c0 27.648 20.992 50.368 47.872 53.12l5.44 0.256h146.112a32 32 0 0 1 4.352 63.68l-4.352 0.32H245.312a117.312 117.312 0 0 1-117.12-110.208L128 739.776V635.776a32 32 0 0 1 32-32z"/></svg>
+    </button>
     <div class="d-flex align-items-center ms-auto flex-shrink-0 navbar-toolbar">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +39,7 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">about</a></li>
-        <li class="nav-item"><a class="nav-link" href="project/projects.html">projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="project/projects.html">project</a></li>
       </ul>
     </div>
   </div>
@@ -106,7 +109,7 @@
           <a href="https://www.lmu.de/en/" target="_blank" rel="noopener noreferrer">LMU Munich</a>,
           supervised by
           <a href="https://www.dbs.ifi.lmu.de/~tresp/" target="_blank" rel="noopener noreferrer">Prof. Dr. Volker Tresp</a>.
-          I am also junior member of the
+          I am also a <a href="https://mcml.ai/team/juniors/" target="_blank" rel="noopener noreferrer">junior member</a> of the
           <a href="https://mcml.ai/" target="_blank" rel="noopener noreferrer">Munich Center for Machine Learning (MCML)</a>.
           Prior to this, I obtained my M.Sc. in Data Engineering and Analytics from the
           <a href="https://www.cit.tum.de/en/cit/home/" target="_blank" rel="noopener noreferrer">Technical University of Munich</a>
@@ -129,6 +132,101 @@
       <!-- === Selected Publications === -->
       <section class="section-card">
         <h2 class="section-title">Selected Publications</h2>
+
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <a href="https://aclanthology.org/2026.emnlp-main.579/" target="_blank" rel="noopener" aria-label="Paper: Routing-Free Mixture-of-Experts">
+              <img src="assets/images/RFMoE.png" alt="Routing-Free MoE overview figure" class="pub-image" />
+            </a>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://aclanthology.org/2026.emnlp-main.579/" target="_blank" rel="noopener">Routing-Free Mixture-of-Experts</a></div>
+            <div class="pub-authors"><strong>Yilun Liu*</strong>, Jinru Han*, Sikuan Yan, Volker Tresp, Yunpu Ma <small>(*equal contribution)</small></div>
+            <div class="pub-venue">EMNLP 2026 Main Conference <span class="pub-links"><a href="https://aclanthology.org/2026.emnlp-main.579/" target="_blank" rel="noopener">[Paper]</a><a href="https://github.com/liuyilun2000/RoutingFreeMoE/tree/release" target="_blank" rel="noopener">[Code]</a></span></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>Routing-Free MoE architecture, eliminating routers, Softmax, TopK, and hard-coded load balancing</li>
+              <li>Unified, adaptive load-balancing framework jointly optimizing token- and expert-balancing</li>
+              <li>Improved performance and efficiency over baselines</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <a href="https://aclanthology.org/2026.emnlp-main.777/" target="_blank" rel="noopener" aria-label="Paper: PyraVid">
+              <img src="assets/images/PyraVid.png" alt="PyraVid hierarchical multimodal memory figure" class="pub-image" />
+            </a>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://aclanthology.org/2026.emnlp-main.777/" target="_blank" rel="noopener">PyraVid: Hierarchical Multimodal Memory for Long-Horizon Video Reasoning</a></div>
+            <div class="pub-authors">Sikuan Yan, Sicheng Dong, Haotong Wang, Ercong Nie, <strong>Yilun Liu</strong>, Jinhe Bi, Yingjie Xu, Susanna Schwarzmann, Riccardo Trivisonno, Volker Tresp, Yunpu Ma</div>
+            <div class="pub-venue">EMNLP 2026 Main Conference <span class="pub-links"><a href="https://aclanthology.org/2026.emnlp-main.777/" target="_blank" rel="noopener">[Paper]</a></span></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>Hierarchical multimodal memory with a coarse-to-fine pyramid structure for long-horizon video reasoning</li>
+              <li>Structure-guided memory expansion with pruning for causally related but semantically distant events</li>
+              <li>Consistent gains across long-video benchmarks, model scales, and question types</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <a href="https://aclanthology.org/2026.acl-long.1844/" target="_blank" rel="noopener" aria-label="Paper: SIREN">
+              <img src="assets/images/SIREN.png" alt="SIREN overview figure" class="pub-image" />
+            </a>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://aclanthology.org/2026.acl-long.1844/" target="_blank" rel="noopener">LLM Safety From Within: Detecting Harmful Content with Internal Representations</a></div>
+            <div class="pub-authors">Difan Jiao, <strong>Yilun Liu</strong>, Ye Yuan, Zhenwei Tang, Linfeng Du, Haolun Wu, Ashton Anderson </div>
+            <div class="pub-venue">ACL 2026 Main Conference <span class="pub-links"><a href="https://aclanthology.org/2026.acl-long.1844/" target="_blank" rel="noopener">[Paper]</a><a href="https://github.com/CSSLab/SIREN" target="_blank" rel="noopener">[Code]</a><a href="assets/images/ACL'26-SIREN-poster.jpg" target="_blank" rel="noopener">[Poster]</a></span></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>SIREN, a plug-and-play component harnessing LLM internal representations for harmfulness detection</li>
+              <li>Outperforming dedicated safety guardrails in performance, generalization, and efficiency</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener" aria-label="Paper: PERFT">
+              <img src="assets/images/PERFT.png" alt="PERFT performance figure" class="pub-image" />
+            </a>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">PERFT: Parameter-Efficient Routed Fine-Tuning for Mixture-of-Expert Model</a></div>
+            <div class="pub-authors"><strong>Yilun Liu*</strong>, Yunpu Ma*, Shuo Chen, Zifeng Ding, Bailan He, Zhen Han, Volker Tresp <small>(*equal contribution)</small></div>
+            <div class="pub-venue">EACL 2026 Findings <span class="pub-links"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">[Paper]</a><a href="https://github.com/liuyilun2000/PERFT" target="_blank" rel="noopener">[Code]</a><a href="assets/images/EACL'26-PERFT-poster.jpg" target="_blank" rel="noopener">[Poster]</a></span></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>Dynamics between memory vectors in experts and expert vectors in routers when PEFTing to MoE LLMs</li>
+              <li>Unified framework for integrating PEFT with MoE LLMs</li>
+              <li>PERFT, a family of effective and scalable adaptation strategies</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pub-entry pub-entry--with-image">
+          <div class="pub-image-slot">
+            <a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener" aria-label="Paper: SPIN">
+              <img src="assets/images/SPIN.png" alt="SPIN aggregated feature analysis figure" class="pub-image" />
+            </a>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">SPIN: Sparsifying and Integrating Internal Neurons in Large Language Models for Text Classification</a></div>
+            <div class="pub-authors">Difan Jiao*, <strong>Yilun Liu*</strong>, Zhenwei Tang, Danial Matter, Jürgen Pfeffer, Ashton Anderson
+              <small>(*equal contribution)</small>
+            </div>
+            <div class="pub-venue">ACL 2024 Findings <span class="pub-links"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">[Paper]</a><a href="https://github.com/difanj0713/SPIN" target="_blank" rel="noopener">[Code]</a><a href="assets/images/ACL'24-SPIN-poster.jpg" target="_blank" rel="noopener">[Poster]</a></span></div>
+            <ul class="pub-abstract mt-1 mb-1">
+              <li>Lightweight plug-and-play text classification frameworkusing LLM internal representations</li>
+              <li>Superior performance, efficiency, and interpretability compared to conventional methods</li>       
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- === Recent Preprints === -->
+      <section class="section-card">
+        <h2 class="section-title">Recent Preprints</h2>
 
         <div class="pub-entry pub-entry--with-image">
           <div class="pub-image-slot">
@@ -198,96 +296,6 @@
             </ul>
           </div>
         </div>
-        
-        <div class="pub-entry pub-entry--with-image">
-          <div class="pub-image-slot">
-            <a href="https://aclanthology.org/2026.emnlp-main.579/" target="_blank" rel="noopener" aria-label="Paper: Routing-Free Mixture-of-Experts">
-              <img src="assets/images/RFMoE.png" alt="Routing-Free MoE overview figure" class="pub-image" />
-            </a>
-          </div>
-          <div class="pub-content">
-            <div class="pub-title"><a href="https://aclanthology.org/2026.emnlp-main.579/" target="_blank" rel="noopener">Routing-Free Mixture-of-Experts</a></div>
-            <div class="pub-authors"><strong>Yilun Liu*</strong>, Jinru Han*, Sikuan Yan, Volker Tresp, Yunpu Ma <small>(*equal contribution)</small></div>
-            <div class="pub-venue">EMNLP 2026 Main Conference <span class="pub-links"><a href="https://aclanthology.org/2026.emnlp-main.579/" target="_blank" rel="noopener">[Paper]</a><a href="https://github.com/liuyilun2000/RoutingFreeMoE/tree/release" target="_blank" rel="noopener">[Code]</a></span></div>
-            <ul class="pub-abstract mt-1 mb-1">
-              <li>Routing-Free MoE architecture, eliminating routers, Softmax, TopK, and hard-coded load balancing</li>
-              <li>Unified, adaptive load-balancing framework jointly optimizing token- and expert-balancing</li>
-              <li>Improved performance and efficiency over baselines</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="pub-entry pub-entry--with-image">
-          <div class="pub-image-slot">
-            <a href="https://arxiv.org/abs/2605.17065" target="_blank" rel="noopener" aria-label="Paper: PyraVid">
-              <img src="assets/images/PyraVid.png" alt="PyraVid hierarchical multimodal memory figure" class="pub-image" />
-            </a>
-          </div>
-          <div class="pub-content">
-            <div class="pub-title"><a href="https://arxiv.org/abs/2605.17065" target="_blank" rel="noopener">PyraVid: Hierarchical Multimodal Memory for Long-Horizon Video Reasoning</a></div>
-            <div class="pub-authors">Sikuan Yan, Sicheng Dong, Haotong Wang, Ercong Nie, <strong>Yilun Liu</strong>, Jinhe Bi, Yingjie Xu, Susanna Schwarzmann, Riccardo Trivisonno, Volker Tresp, Yunpu Ma</div>
-            <div class="pub-venue">EMNLP 2026 Main Conference <span class="pub-links"><a href="https://arxiv.org/abs/2605.17065" target="_blank" rel="noopener">[Paper]</a></span></div>
-            <ul class="pub-abstract mt-1 mb-1">
-              <li>Hierarchical multimodal memory with a coarse-to-fine pyramid structure for long-horizon video reasoning</li>
-              <li>Structure-guided memory expansion with pruning for causally related but semantically distant events</li>
-              <li>Consistent gains across long-video benchmarks, model scales, and question types</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="pub-entry pub-entry--with-image">
-          <div class="pub-image-slot">
-            <a href="https://aclanthology.org/2026.acl-long.1844/" target="_blank" rel="noopener" aria-label="Paper: SIREN">
-              <img src="assets/images/SIREN.png" alt="SIREN overview figure" class="pub-image" />
-            </a>
-          </div>
-          <div class="pub-content">
-            <div class="pub-title"><a href="https://aclanthology.org/2026.acl-long.1844/" target="_blank" rel="noopener">LLM Safety From Within: Detecting Harmful Content with Internal Representations</a></div>
-            <div class="pub-authors">Difan Jiao, <strong>Yilun Liu</strong>, Ye Yuan, Zhenwei Tang, Linfeng Du, Haolun Wu, Ashton Anderson </div>
-            <div class="pub-venue">ACL 2026 Main Conference <span class="pub-links"><a href="https://aclanthology.org/2026.acl-long.1844/" target="_blank" rel="noopener">[Paper]</a><a href="https://github.com/CSSLab/SIREN" target="_blank" rel="noopener">[Code]</a><a href="assets/images/ACL'26-SIREN-poster.jpg" target="_blank" rel="noopener">[Poster]</a></span></div>
-            <ul class="pub-abstract mt-1 mb-1">
-              <li>SIREN, a plug-and-play component harnessing LLM internal representations for harmfulness detection</li>
-              <li>Outperforming dedicated safety guardrails in performance, generalization, and efficiency</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="pub-entry pub-entry--with-image">
-          <div class="pub-image-slot">
-            <a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener" aria-label="Paper: PERFT">
-              <img src="assets/images/PERFT.png" alt="PERFT performance figure" class="pub-image" />
-            </a>
-          </div>
-          <div class="pub-content">
-            <div class="pub-title"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">PERFT: Parameter-Efficient Routed Fine-Tuning for Mixture-of-Expert Model</a></div>
-            <div class="pub-authors"><strong>Yilun Liu*</strong>, Yunpu Ma*, Shuo Chen, Zifeng Ding, Bailan He, Zhen Han, Volker Tresp <small>(*equal contribution)</small></div>
-            <div class="pub-venue">EACL 2026 Findings <span class="pub-links"><a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">[Paper]</a><a href="https://github.com/liuyilun2000/PERFT" target="_blank" rel="noopener">[Code]</a><a href="assets/images/EACL'26-PERFT-poster.jpg" target="_blank" rel="noopener">[Poster]</a></span></div>
-            <ul class="pub-abstract mt-1 mb-1">
-              <li>Dynamics between memory vectors in experts and expert vectors in routers when PEFTing to MoE LLMs</li>
-              <li>Unified framework for integrating PEFT with MoE LLMs</li>
-              <li>PERFT, a family of effective and scalable adaptation strategies</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="pub-entry pub-entry--with-image">
-          <div class="pub-image-slot">
-            <a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener" aria-label="Paper: SPIN">
-              <img src="assets/images/SPIN.png" alt="SPIN aggregated feature analysis figure" class="pub-image" />
-            </a>
-          </div>
-          <div class="pub-content">
-            <div class="pub-title"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">SPIN: Sparsifying and Integrating Internal Neurons in Large Language Models for Text Classification</a></div>
-            <div class="pub-authors">Difan Jiao*, <strong>Yilun Liu*</strong>, Zhenwei Tang, Danial Matter, Jürgen Pfeffer, Ashton Anderson
-              <small>(*equal contribution)</small>
-            </div>
-            <div class="pub-venue">ACL 2024 Findings <span class="pub-links"><a href="https://aclanthology.org/2024.findings-acl.277/" target="_blank" rel="noopener">[Paper]</a><a href="https://github.com/difanj0713/SPIN" target="_blank" rel="noopener">[Code]</a><a href="assets/images/ACL'24-SPIN-poster.jpg" target="_blank" rel="noopener">[Poster]</a></span></div>
-            <ul class="pub-abstract mt-1 mb-1">
-              <li>Lightweight plug-and-play text classification frameworkusing LLM internal representations</li>
-              <li>Superior performance, efficiency, and interpretability compared to conventional methods</li>       
-            </ul>
-          </div>
-        </div>
       </section>
 
       <!-- === Educational Background === -->
@@ -298,12 +306,12 @@
           <div class="edu-period">10.2025 – present</div>
           <div class="edu-content">
             <strong>Ph.D. Student <em>(in progress)</em></strong> 
-            <div class="institution">Institut für Informatik, <a href="https://www.lmu.de/en/" target="_blank" rel="noopener">Ludwig-Maximilians-Universität München</a><br />Supervisor: <a href="https://www.dbs.ifi.lmu.de/~tresp/" target="_blank" rel="noopener noreferrer">Prof. Dr. Volker Tresp</a></div>
+            <div class="institution">Institut für Informatik, <a href="https://www.lmu.de/en/" target="_blank" rel="noopener">Ludwig-Maximilians-Universität München</a><br />Munich, Bavaria, Germany</div>
           </div>
         </div>
 
         <div class="edu-entry">
-          <div class="edu-period">10.2021 – </div>
+          <div class="edu-period">10.2021 – 03.2026</div>
           <div class="edu-content">
             <strong>M.Sc. Data Engineering and Analytics </strong>
             <div class="institution">Department of Informatics, <a href="https://www.in.tum.de/in/startseite/" target="_blank" rel="noopener">Technical University of Munich</a><br />Munich, Bavaria, Germany</div>
@@ -318,13 +326,6 @@
           </div>
         </div>
 
-        <div class="edu-entry">
-          <div class="edu-period">09.2016 – 07.2017</div>
-          <div class="edu-content">
-            <strong>Pre-university Education, Honors Youth Program</strong>
-            <div class="institution">Qian Xuesen Honors College, XJTU &amp; Tianjin Nankai High School<br />Xi'an, Shaanxi; Tianjin, China</div>
-          </div>
-        </div>
       </section>
 
       <!-- === Research Funding & Computing Support === -->
@@ -337,28 +338,28 @@
               <a href="https://mcml.ai/" target="_blank" rel="noopener">Munich Center for Machine Learning (MCML)</a>
               &amp; <a href="https://www.lrz.de/en/" target="_blank" rel="noopener">Leibniz Supercomputing Centre (LRZ)</a>
             </dt>
-            <dd class="funding-funders">German Federal Ministry of Research, Technology and Space (BMFTR) &middot; Bavarian State Ministry of Science and the Arts (StMWK)</dd>
+            <dd class="funding-funders">German Federal Ministry of Research, Technology and Space (BMFTR)·  Bavarian State Ministry of Science and the Arts (StMWK)</dd>
           </div>
 
           <div class="funding-entry">
             <dt class="funding-provider">
               <a href="https://www.hessian.ai/computeservices/" target="_blank" rel="noopener">Hessian Center for Artificial Intelligence (hessian.AI)</a>
             </dt>
-            <dd class="funding-funders">German Federal Ministry of Research, Technology and Space (BMFTR) &middot; Hessian Ministry for Digitalisation and Innovation (HMD)</dd>
+            <dd class="funding-funders">German Federal Ministry of Research, Technology and Space (BMFTR)·  Hessian Ministry for Digitalisation and Innovation (HMD)</dd>
           </div>
 
           <div class="funding-entry">
             <dt class="funding-provider">
               <a href="https://hpc.fau.de/" target="_blank" rel="noopener">Erlangen National High Performance Computing Center (NHR@FAU)</a>
             </dt>
-            <dd class="funding-funders">German federal government &middot; Bavarian state government &middot; German Research Foundation (DFG) &middot; Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)</dd>
+            <dd class="funding-funders">German federal government  ·  Bavarian state government  ·  German Research Foundation (DFG)·  Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)</dd>
           </div>
 
           <div class="funding-entry">
             <dt class="funding-provider">
               <a href="https://www.fz-juelich.de/en/jsc/jupiter" target="_blank" rel="noopener">JUPITER Exascale Supercomputer</a>
             </dt>
-            <dd class="funding-funders">European High Performance Computing Joint Undertaking (EuroHPC JU) &middot; German Federal Ministry of Research, Technology and Space (BMFTR) &middot; Ministry of Culture and Science of the State of North Rhine-Westphalia (MKW NRW)</dd>
+            <dd class="funding-funders">European High Performance Computing Joint Undertaking (EuroHPC JU)·  German Federal Ministry of Research, Technology and Space (BMFTR)·  Ministry of Culture and Science of the State of North Rhine-Westphalia (MKW NRW)</dd>
           </div>
         </dl>
       </section>
@@ -369,7 +370,7 @@
 
         <div class="skill-category">
           <strong>Reviewer</strong>
-          <span>ICLR (2025, 2026) · COLM (2025, 2026) · ACL Rolling Review (multiple cycles) · IC2S2 (2025)</span>
+          <span>ICLR'25, COLM'25, IC2S2'25, ICLR'26, COLM'26, ICLR'27, WWW'27, ACL Rolling Review (ARR)</span>
         </div>
         <div class="skill-category invited-talks">
           <strong>Invited Talks</strong>
@@ -387,10 +388,11 @@
 
 <!-- ===== Footer ===== -->
 <footer>
-  © Copyright 2026 &middot; Yilun Liu
+  © Copyright 2026  ·  Yilun Liu
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/theme-favicon.js"></script>
+<script src="assets/js/language.js"></script>
 </body>
 </html>
