@@ -441,7 +441,7 @@ h2.section-title {
   font-size: 1.2rem;
   font-weight: var(--fw-extra-bold);
   line-height: 1.4;
-  border-bottom: 2px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
 }
@@ -1086,6 +1086,35 @@ figcaption {
 [data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
   background-color: rgba(255, 255, 255, 0.04);
   color: var(--color-text);
+}
+
+/* ---- Latest news ---- */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 0.3rem 1rem;
+  padding: 0.3rem 0;
+  line-height: 1.65;
+}
+
+.news-list time {
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@media (max-width: 575px) {
+  .news-list li {
+    grid-template-columns: 1fr;
+    padding: 0.4rem 0;
+    gap: 0.1rem;
+  }
 }
 
 /* ---- Responsive tweaks ---- */

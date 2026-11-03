@@ -18,7 +18,17 @@
 
   translate('.sidebar-info h4', '刘逸伦');
   translate('.sidebar-line:first-of-type > span', 'Yilun Liu');
-  translate('.section-title', ['代表性学术成果', '近期预印本', '教育背景', '科研资助与计算资源', '学术服务']);
+  translate('.section-title', ['最新动态', '代表性学术成果', '近期工作', '教育背景', '科研与计算资源资助', '学术服务']);
+  translate('.news-list time', ['2026.10', '2026.09', '2026.08', '2026.06', '2026.04', '2026.03']);
+  translate('.news-text', [
+    '在 <a href="http://ccbr99.cn/" target="_blank" rel="noopener">CCBR 2026 博士生论坛</a>作受邀报告《通过递归自我提升构建代码智能体》。',
+    '在匈牙利布达佩斯举行的 EMNLP 2026 上介绍 <a href="https://aclanthology.org/2026.emnlp-main.579/" target="_blank" rel="noopener">Routing-Free MoE</a>。',
+    '在 <a href="https://nice-intl.github.io/" target="_blank" rel="noopener">NICE Seminar #198</a> 作报告《<a href="https://www.bilibili.com/video/BV1p3YJ6VEBb/" target="_blank" rel="noopener">孟德尔-哥德尔机器</a>》。',
+    '<a href="https://aclanthology.org/2026.emnlp-main.579/" target="_blank" rel="noopener">Routing-Free MoE</a> 和 <a href="https://aclanthology.org/2026.emnlp-main.777/" target="_blank" rel="noopener">PyraVid</a> 获 EMNLP 2026 主会接收。',
+    '研究项目获得 <a href="https://www.hessian.ai/computeservices/" target="_blank" rel="noopener">hessian.AI</a> 算力支持。',
+    '<a href="https://aclanthology.org/2026.acl-long.1844/" target="_blank" rel="noopener">LLM Safety From Within</a> 获 ACL 2026 主会接收。',
+    '在摩洛哥拉巴特举行的 EACL 2026 上介绍 <a href="https://aclanthology.org/2026.findings-eacl.232/" target="_blank" rel="noopener">PERFT</a>。'
+  ]);
   translate('.col-lg-9 > .section-card:first-child > .pub-entry',
     '你好！我目前是<a href="https://www.lmu.de/en/" target="_blank" rel="noopener noreferrer">慕尼黑大学（LMU Munich）</a>计算机科学系博士研究生，师从 <a href="https://www.dbs.ifi.lmu.de/~tresp/" target="_blank" rel="noopener noreferrer">Volker Tresp 教授</a>，同时也是<a href="https://mcml.ai/" target="_blank" rel="noopener noreferrer">慕尼黑机器学习中心（MCML）</a>的<a href="https://mcml.ai/team/juniors/" target="_blank" rel="noopener noreferrer">初级研究员</a>。此前，我于<a href="https://www.cit.tum.de/en/cit/home/" target="_blank" rel="noopener noreferrer">慕尼黑工业大学（TUM）</a>获数据工程与分析硕士学位，于<a href="https://eie.xjtu.edu.cn/" target="_blank" rel="noopener noreferrer">西安交通大学</a>获计算机科学与技术（少年班）学士学位。' +
     '<br><br>我的研究主要关注大语言模型与智能体系统的能力边界及内部机理，并以此为基础探索新的方法与解决方案。目前的研究方向包括智能体递归自我提升、高效模型架构设计、机制可解释性与安全。欢迎兴趣相近的朋友<a href="mailto:liuyilun2000@126.com">与我联系</a>，共同交流研究想法和合作机会。');
@@ -125,7 +135,7 @@
   translate('.skill-category > span', "ICLR'25, COLM'25, IC2S2'25, ICLR'26, COLM'26, ICLR'27, WWW'27, ACL Rolling Review (ARR)");
   translate('.talk-list li', [
     '通过递归自我提升构建代码智能体，<a href="http://ccbr99.cn/" target="_blank" rel="noopener">CCBR 2026 博士生论坛</a>，中国西安',
-    '<a href="https://www.bilibili.com/video/BV1p3YJ6VEBb/" target="_blank" rel="noopener">孟德尔哥德尔机器（Mendel Gödel Machine）</a>，NICE 2026'
+    '<a href="https://www.bilibili.com/video/BV1p3YJ6VEBb/" target="_blank" rel="noopener">孟德尔-哥德尔机器</a>，<a href="https://nice-intl.github.io/" target="_blank" rel="noopener">NICE Seminar #198</a>'
   ]);
 
   var language = 'en';
